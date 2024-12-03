@@ -11,9 +11,9 @@ import java.util.List;
 public interface ReplyMapper {
     void saveReply(Reply reply);
 
-    List<Reply> findAll(@Param("page") Page page);
+    List<Reply> findAll(@Param("page") Page page, String searchByName);
 
-    int countAll();
+    int countAll(String searchByName);
 
     String selectPasswordById(int postId);
 

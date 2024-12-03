@@ -12,4 +12,21 @@
         )
     </insert>
 
+    <select id="getAllData" resultType="map">
+        select
+            seq as '순번',
+            name as '이름',
+            contact as '연락처',
+            cnt as '개수',
+            case
+                when type = 'C' THEN '현장수령'
+                else '택배발송'
+            end as '수령방법',
+            addr as '주소',
+            reg_dt as '신청시간'
+        from dbo.note with(nolock)
+        where use_yn = 'Y'
+        order by seq desc;
+    </select>
+
 </mapper>

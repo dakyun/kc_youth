@@ -27,11 +27,11 @@ public class ReplyService {
         mapper.saveReply(reply);
     }
 
-    public List<ReplyListResponseDTO> findAll(Page page) {
+    public List<ReplyListResponseDTO> findAll(Page page, String searchByName) {
         log.info("service에 replyList 요청 들어 옴!");
         List<ReplyListResponseDTO> dtoList = new ArrayList<>();
         log.info("page에 들어있는 값: " + page.toString());
-        List<Reply> replies = mapper.findAll(page);
+        List<Reply> replies = mapper.findAll(page, searchByName);
         for (Reply reply : replies) {
             ReplyListResponseDTO dto = new ReplyListResponseDTO(reply);
             dtoList.add(dto);
@@ -39,9 +39,9 @@ public class ReplyService {
         return dtoList;
     }
 
-    public int countAll() {
+    public int countAll(String searchByName) {
         log.info("service에 countAll 요청 들어 옴!");
-        return mapper.countAll();
+        return mapper.countAll(searchByName);
     }
 
     public boolean isValidPassword(ReplyDeleteRequestDTO dto) {
