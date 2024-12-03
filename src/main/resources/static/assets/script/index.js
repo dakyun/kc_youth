@@ -292,29 +292,29 @@ $(document).ready(function() {
 });
 
 
-// Adding scroll event listener
-document.addEventListener('scroll', horizontalScroll);
-
-//Selecting Elements
-let sticky = document.querySelector('.sticky');
-let stickyParent = document.querySelector('.sticky-parent');
-
-let scrollWidth = sticky.scrollWidth;
-let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
-
-//Scroll function
-function horizontalScroll(){
-
-    //Checking whether the sticky element has entered into view or not
-    let stickyPosition = sticky.getBoundingClientRect().top;
-    if(stickyPosition > 1){
-        return;
-    }else{
-        let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
-        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.85;
-
-    }
-}
+// // Adding scroll event listener
+// document.addEventListener('scroll', horizontalScroll);
+//
+// //Selecting Elements
+// let sticky = document.querySelector('.sticky');
+// let stickyParent = document.querySelector('.sticky-parent');
+//
+// let scrollWidth = sticky.scrollWidth;
+// let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
+//
+// //Scroll function
+// function horizontalScroll(){
+//
+//     //Checking whether the sticky element has entered into view or not
+//     let stickyPosition = sticky.getBoundingClientRect().top;
+//     if(stickyPosition > 1){
+//         return;
+//     }else{
+//         let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
+//         sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.85;
+//
+//     }
+// }
 
 
 // 이름으로 작성 글 찾을 시 발생하는 이벤트

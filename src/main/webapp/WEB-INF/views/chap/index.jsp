@@ -17,6 +17,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
     <script>
         let nowPageNo = '${maker.page.pageNo}';
@@ -83,20 +85,71 @@
         </ul>
     </div>
 </header>
-<div class="sticky-parent">
+
+<%--<div class="sticky-parent">
     <div class="sticky">
         <div class="horizontal"> <!--Horizantal conatiner with display flex-->
-
             <!--Content Start-->
-            <div class="dim" style="background-color: aqua;"></div>
-            <div class="dim" style="background-color: rgb(255, 238, 0);"></div>
-            <div class="dim" style="background-color: rgb(81, 255, 0);"></div>
-            <div class="dim" style="background-color: rgb(247, 0, 255);"></div>
-            <div class="dim" style="background-color: rgb(27, 24, 179);"></div>
-            <div class="dim" style="background-color:black"></div>
+            <div class="dim empty" ></div>
+            <div class="dim" style="background-image:url(/assets/images/scroll01.jpg)"></div>
+            <div class="dim empty" ></div>
+            <div class="dim" style="background-image:url(/assets/images/scroll03.jpg)"></div>
+            <div class="dim empty" ></div>
+            <div class="dim" style="background-image:url(/assets/images/scroll06.jpg)"></div>
+            <div class="dim empty" ></div>
+            <div class="dim last" style="background-image:url(/assets/images/scroll05.jpg)"></div>
             <!--Content End-->
 
         </div>
+    </div>
+</div>--%>
+<div id="scrollEvt">
+    <div class="tit_area" data-aos="fade-right">
+        <p class="tit">함께 웃고 함께 우는<br>청년부 공동체 2024</p>
+    </div>
+
+    <div class="img_slide_wrap">
+        <ul class="img_slide">
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll03.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll07.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll08.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll02.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll01.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll02.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#;">
+                    <img src="/assets/images/scroll05.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bg">
+        <p class="flow_txt">2024 KWANGCHUN YOUTH RECAP</p>
     </div>
 </div>
 <div class="container bg-bk">
@@ -551,7 +604,7 @@
 
     const charactersData = [
         { imagePath: '/assets/images/mimo01.png', width: 320, height: 320, scale:0.9 },
-        { imagePath: '/assets/images/mimo13.png', width: 160, height: 160, scale:0.9 },
+        { imagePath: '/assets/images/mimo13.png', width: 160, height: 160, scale:0.8 },
         { imagePath: '/assets/images/mimo04.png', width: 320, height: 320, scale:1 },
         { imagePath: '/assets/images/mimo02.png', width: 320, height: 320, scale:1 },
         { imagePath: '/assets/images/mimo05.png', width: 320, height: 320, scale:0.9 },
@@ -563,6 +616,13 @@
         { imagePath: '/assets/images/mimo14.png', width: 320, height: 320, scale:0.9 },
         { imagePath: '/assets/images/mimo15.png', width: 320, height: 320, scale:0.9 },
         { imagePath: '/assets/images/mimo12.png', width: 320, height: 320, scale:0.9 },
+        { imagePath: '/assets/images/mimo20.png', width: 210, height: 200, scale:0.9 },
+        { imagePath: '/assets/images/mimo21.png', width: 210, height: 200, scale:0.9 },
+        { imagePath: '/assets/images/mimo22.png', width: 210, height: 200, scale:0.9 },
+        { imagePath: '/assets/images/mimo23.png', width: 210, height: 200, scale:0.9 },
+        { imagePath: '/assets/images/mimo21.png', width: 210, height: 200, scale:0.7 },
+        { imagePath: '/assets/images/mimo22.png', width: 210, height: 200, scale:0.7 },
+        { imagePath: '/assets/images/mimo23.png', width: 210, height: 200, scale:0.7 },
     ];
 
     engine.world.gravity.y = 0;
@@ -742,7 +802,30 @@
             // 기본 동작을 막지 않도록 주석 처리 또는 제거
             // event.preventDefault();
         });
+
+        gsap.registerPlugin(ScrollTrigger);
+        const pinnedImageWrappers = document.querySelectorAll('#scrollEvt');
+        if (pinnedImageWrappers) {
+            pinnedImageWrappers.forEach((wrapper) => {
+                const inner = wrapper.querySelector('#scrollEvt .img_slide');
+                gsap.to(inner, {
+                    x: () => -(inner.scrollWidth - document.documentElement.clientWidth) + 'px',
+                    ease: 'none',
+                    scrollTrigger: {
+                        start: 'top',
+                        trigger: wrapper,
+                        pin: true,
+                        scrub: 1,
+                        invalidateOnRefresh: true,
+                        pinSpacing : true,
+                        end: () => `+=${inner.offsetWidth}`
+                    }
+                });
+            });
+        }
     });
+
+
 </script>
 
 <script src="/assets/script/index.js"></script>
