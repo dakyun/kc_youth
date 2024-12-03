@@ -429,7 +429,7 @@
     display: flex;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 750px) {
     .dim {
         display: block;
         min-width: 100vw;
@@ -557,17 +557,28 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    @include mq("small-screen-3") {
+        width:100%;
+        padding:px(120) 0 px(80);
+    }
     .sub {
         display: block;
         font-size: 28px;
         font-weight: 400;
         margin-bottom:12px;
+        @include mq("small-screen-3") {
+            font-size:px(28);
+            margin-bottom:px(14);
+        }
     }
     strong {
         display: block;
         font-size: 54px;
         font-weight: 700;
         letter-spacing: -0.5px;
+        @include mq("small-screen-3") {
+            font-size:px(54);
+        }
     }
     .org-btn {
         padding: 12px 20px;
@@ -575,20 +586,31 @@
         box-sizing: border-box;
         background: #ff6b1d;
         display: block;
-        border-radius: 50px;
+        border-radius: 150px;
+        @include mq("small-screen-3") {
+            padding: px(12) px(20);
+        }
         span {
             color: #fff;
             font-size: 18px;
             display: flex;
             align-items: center;
             column-gap: 5px;
+            @include mq("small-screen-3") {
+                column-gap:px(5);
+                font-size: px(18);
+            }
             &::after {
                 content: "";
                 display: inline-block;
                 width: 21px;
                 height: 16px;
                 background: url(../images/ico_arrow_right.png) no-repeat center center /
-            100%;
+                100%;
+                @include mq("small-screen-3") {
+                    width: px(21);
+                    height: px(16);
+                }
             }
         }
     }
@@ -596,6 +618,9 @@
         display:block;
         text-align:center;
         padding-bottom:50px;
+        @include mq("small-screen-3") {
+            padding-bottom:px(50);
+        }
         .sub{
             width:340px;
             height:64px;
@@ -605,23 +630,43 @@
             display:block;
             font-size:28px;
             margin:0 auto 10px;
+            @include mq("small-screen-3") {
+                width:px(340);
+                height:px(64);
+                line-height: px(64);
+                border-radius:px(80);
+                font-size:px(28);
+                margin:0 auto px(10);
+            }
         }
         strong{
             color:#ff6714;
             font-size:92px;
             letter-spacing:-2px;
+            @include mq("small-screen-3"){
+                font-size:px(92);
+                letter-spacing:px(-2);
+            }
         }
         p{
             font-size:28px;
             color:#ff6714;
             line-height:1.4;
             margin-top:20px;
+            @include mq("small-screen-3"){
+                font-size:px(28);
+                margin-top:px(20);
+            }
             .mini{
                 color:#d6d6d6;
                 font-size:24px;
                 display:block;
                 margin-top:20px;
                 font-weight: 300;
+                @include mq("small-screen-3"){
+                    font-size:px(24);
+                    margin-top:px(20);
+                }
             }
         }
     }
@@ -659,6 +704,9 @@
             strong{
                 color:#fff;
                 font-size:54px;
+                @include mq("small-screen-3"){
+                    font-size:px(54);
+                }
             }
         }
     }
@@ -667,12 +715,19 @@
     .card-swiper{
         width:500px;
         margin:0 auto;
+        @include mq("small-screen-3"){
+            width:px(500);
+        }
         .swiper-slide{
             border-radius:20px;
             width:500px;
             height:500px;
             background:#ddd;
             overflow:unset;
+            @include mq("small-screen-3") {
+                width:px(500) !important;
+                height:px(500) !important;
+            }
             img{
                 width:100%;
                 height:100%;
@@ -728,6 +783,12 @@
         display:block;
         width:400px;
         margin:0 auto;
+        @include mq('small-screen-3'){
+            width:px(400);
+            img{
+                width:100%
+            }
+        };
     }
     .join{
         width:1140px;
@@ -776,6 +837,11 @@
                         transform:translateY(-50%);
                     }
                 }
+            }
+        }
+        @include mq("small-screen-3") {
+            &{
+                width:100%;
             }
         }
     }
@@ -1039,7 +1105,13 @@
         left:50%;
         transform:translateX(-50%);
     }
-    #mimoCanvas { width: 100%; height: 160vh; margin: -30vh 0;overflow:hidden;}
+    #mimoCanvas { width: 100%; height: 160vh; margin: -30vh 0;overflow:hidden;
+        @include mq("small-screen-3") {
+            &{
+              width:80%;
+              height:100vh; 
+            }
+          }}
     #mimoCanvas canvas{ width: 100%; height: 100%;}
     .mimo-btn{
         width:320px;
@@ -1051,6 +1123,12 @@
         line-height:60px;
         background:#ff6c1d94;
         margin:30px auto -15px;
+        @include mq("small-screen-3") {
+            &{
+                width:px(320);
+                height:px(60);  
+            }
+          }
         span{
             font-size:24px;
             display:flex;
@@ -1071,6 +1149,9 @@
         margin: 30px auto 0;
         justify-content: space-between;
         width: auto;
+        @include mq('small-screen-3'){
+            max-width:px(400)
+        };
         li{
             a{
                 width:32px;

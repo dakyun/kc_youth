@@ -23,17 +23,14 @@ ol,ul,li{list-style:none;}
 a{text-decoration:none;color:#222}
 .container{
     padding-left:17.8947vw;
-    @include mq('small-screen-1'){
-        padding-left:220px;
-    };
-    @include mq('small-screen-2'){
-        padding-left:100px;
-    };
     @include mq('small-screen-3'){
-        margin:0 40px;
-        padding-left:0
+        padding-left:unset
     };
     &.wrapper{
         padding-right:17.8947vw;
     }
+    @include mq('small-screen-3'){
+        padding-right:unset;
+        padding:0 px(30);
+    };
 }
