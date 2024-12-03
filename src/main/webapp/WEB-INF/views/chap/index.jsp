@@ -390,9 +390,9 @@
             </ul>
             <div class="pager">
                 <ul>
-                    <c:if test="${maker.page.pageNo != 1}">
+                    <c:if test="${maker.page.pageNo > 1}">
                         <li class="page-item cm"><a class="page-link"
-                                                    href="/index?pageNo=1&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
+                                                    href="/index?pageNo=${maker.page.pageNo - 1}&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
                         </li>
                     </c:if>
 
@@ -411,9 +411,9 @@
                         </c:if>
                     </c:forEach>
 
-                    <c:if test="${maker.page.pageNo != maker.finalPage}">
+                    <c:if test="${maker.page.pageNo < maker.finalPage}">
                         <li class="page-item cm next"><a class="page-link"
-                                                         href="/index?pageNo=${maker.finalPage}&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
+                                                         href="/index?pageNo=${maker.page.pageNo + 1}&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
                         </li>
                     </c:if>
 
@@ -534,7 +534,7 @@
             <span class="icon-delete"><img src="assets/images/icon-delete.png" alt=""></span>
             <p>글 삭제를 위해<br>등록 시 입력한 정보를 확인하고<br> 6자리 비밀번호를 입력해 주세요.</p>
             <p id="deleteName">작성자: <span class="name-info"></span></p> <!-- name 정보 표시 -->
-            <label for="password"><span class="hidden">비밀번호</span></label>
+            <label for="delPassword"><span class="hidden">비밀번호</span></label>
             <input class="w100" type="password" id="delPassword" placeholder="6자리 숫자를 입력하세요" name="password" minlength="6" maxlength="6" required>
             <div class="btn-box">
                 <a href="" class="btn n1"><span>삭제하기</span></a>
