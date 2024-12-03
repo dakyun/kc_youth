@@ -96,13 +96,7 @@ $(document).ready(function () {
             success: function (response) {
                 if (response.success) {
                     alert('게시물이 삭제되었습니다.');
-                    // 팝업 닫기
-                    $('.layer-popup.delete-wrap').hide();
-                    // 삭제된 게시물을 화면에서 제거
-                    postItem.remove();
-                    if (response.replyCount !== undefined) {
-                        $('.top-info h5').text(`전체 (${response.replyCount})`);
-                    }
+                    location.href = '/index?pageNo='+nowPageNo+'&amount=12&searchName='+searchName+"#posting";
                 } else {
                     alert(response.message);
                 }
@@ -340,22 +334,22 @@ $("body").on("keydown", ".insearch", function (e) {
 
 // 검색 실행 함수
 function executeSearch() {
-    const searchName = $(".insearch").val().trim(); // 입력된 검색어 가져오기
+    const _searchName = $(".insearch").val().trim(); // 입력된 검색어 가져오기
 
-    if (!searchName) {
+    if (!_searchName) {
         alert("검색어를 입력해주세요.");
         return;
     }
 
     $.ajax({
-        url: `/reply?searchName=${encodeURIComponent(searchName)}`, // 검색어를 URL에 포함
+        url: `/reply?searchName=${encodeURIComponent(_searchName)}`, // 검색어를 URL에 포함
         type: 'GET',
         success: function (response) {
             if (response.success) {
                 if (response.replyCount == 0) {
                     alert("검색 결과가 없습니다.");
                 } else {
-                    location.href = '/index?pageNo=1&amount=12&searchName='+searchName+"#posting";
+                    location.href = '/index?pageNo=1&amount=12&searchName='+_searchName+"#posting";
                 }
             } else {
                 alert(response.message || "검색 실패");

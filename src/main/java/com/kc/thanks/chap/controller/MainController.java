@@ -99,7 +99,6 @@ public class MainController {
             if (isDeleted) {
                 response.put("success", true);
                 response.put("message", "삭제되었습니다.");
-                response.put("replyCount", replyService.countAll(""));
             } else {
                 response.put("success", false);
                 response.put("message", "게시물 삭제에 실패했습니다. 관리자에게 문의해 주세요.");

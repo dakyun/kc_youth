@@ -18,6 +18,11 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+
+    <script>
+        let nowPageNo = '${maker.page.pageNo}';
+        let searchName = '${searchName}';
+    </script>
 </head>
 <body>
     <header id="section1" class="qmenu">
