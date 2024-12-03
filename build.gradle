@@ -48,6 +48,9 @@ dependencies {
 
     // 스프링 시큐리티 모듈
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
 }
 
 tasks.named('test') {
