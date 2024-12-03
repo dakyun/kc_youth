@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +21,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class NoteController {
 
-    private static final String ADMIN_SECRET_PASSWORD = "1234";
+    @Value("${app.admin-secret-password}")
+    private String ADMIN_SECRET_PASSWORD;
     private final NoteService noteService;
 
     @GetMapping("/note")
