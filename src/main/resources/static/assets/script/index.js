@@ -253,7 +253,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         const postItem = $(this).closest('.post-item'); // 클릭된 게시물 항목
-        const content = postItem.find('.contain').text(); // 게시물 내용
+        const content = postItem.find('.contain .real').text(); // 게시물 내용
         const writer = postItem.find('.writer').text(); // 작성자
         const time = postItem.find('.time span').text(); // 작성일
 

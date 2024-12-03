@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>맑은샘광천교회 청년부 2024</title>
-    <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/guide.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -79,7 +78,7 @@
             <li class="on"><a href="#section1"><i class="n1"></i><span class="name">Intro</span></a></li>
             <li><a href="#discography"><i class="n5"></i><span class="name">Youtubes</span></a></li>
             <li><a href="#section3"><i class="n3"></i><span class="name">Event</span></a></li>
-            <li><a href="#section2"><i class="n4"></i><span class="name">Posting</span></a></li>
+            <li><a href="#posting"><i class="n4"></i><span class="name">Posting</span></a></li>
             <li><a href="#section4"><i class="n2"></i><span class="name">Card News</span></a></li>
         </ul>
     </div>
@@ -304,7 +303,7 @@
                     <!-- 댓글 입력 (200자 이내) -->
                     <div class="comment">
                         <label for="comment"><span class="hidden">나의 감사 제목(200자 이내)</span></label>
-                        <textarea id="comment" name="content" maxlength="200" placeholder="2024년 올해의 감사 제목을 나눠주세요(20자 이상 200자 이내)." required></textarea>
+                        <textarea id="comment" name="content" maxlength="200" placeholder="2024년 올해의 감사 제목을 나눠주세요(20자 이상 200자 이내)" required></textarea>
                         <div class="count"><span id="textcount">0</span> / 200</div>
                     </div>
 
@@ -369,7 +368,7 @@
 
             </div>
             <div class="top-info" id="posting">
-                <h5>전체 (${replyCount})</h5>
+                <h5>전체 (${replyCount})<a href="#;" class="back-to"><span>전체보기</span></a></h5>
                 <div class="search">
                     <input type="text" class="insearch" title="검색어 입력" placeholder="이름으로 작성 글 찾기" value="${searchName}">
                     <a class="in-btn">검색</a>
@@ -379,7 +378,7 @@
                 <!-- 카드 복사 -->
                 <c:forEach var="reply" items="${replyList}">
                     <li class="post-item ${reply.background}" data-id="${reply.id}">
-                        <p><span class="inner"><span class="contain"><span class="more">더보기</span>${reply.content}</span></span></p>
+                        <p><span class="inner"><span class="contain"><span class="more">더보기</span><span class="real">${reply.content}</span></span></p>
                         <div class="bottom-area">
                             <span class="writer">${reply.name}&nbsp;${reply.generation.substring(2)}</span>
                             <div class="time"><span>${reply.regDate}</span></div>
