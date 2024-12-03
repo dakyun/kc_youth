@@ -9,7 +9,7 @@
     <title>2025 말씀노트 판매 어드민페이지</title>
 </head>
 <body>
-    <h1>페스워드를 입력하세요</h1>
+    <h1>패스워드를 입력하세요</h1>
     <form action="/note/admin" method="post">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
