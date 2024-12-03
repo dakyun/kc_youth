@@ -366,7 +366,7 @@
                 <div class="top-info" id="posting">
                     <h5>전체 (${replyCount})</h5>
                     <div class="search">
-                        <input type="text" class="insearch" title="검색어 입력" placeholder="이름으로 작성 글 찾기">
+                        <input type="text" class="insearch" title="검색어 입력" placeholder="이름으로 작성 글 찾기" value="${searchName}">
                         <a class="in-btn">검색</a>
                     </div>
                 </div>
@@ -387,7 +387,7 @@
                     <ul>
                         <c:if test="${maker.page.pageNo != 1}">
                             <li class="page-item cm"><a class="page-link"
-                                                     href="/index?pageNo=1&amount=${p.amount}#posting"><span></span></a>
+                                                     href="/index?pageNo=1&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
                             </li>
                         </c:if>
 
@@ -395,20 +395,20 @@
                             <c:if test="${maker.page.pageNo != i}">
                                 <li data-page-num="${i}" class="page-item">
                                     <a class="page-link"
-                                       href="/index?pageNo=${i}&amount=${p.amount}#posting"><span>${i}</span></a>
+                                       href="/index?pageNo=${i}&amount=${p.amount}&searchName=${searchName}#posting"><span>${i}</span></a>
                                 </li>
                             </c:if>
                             <c:if test="${maker.page.pageNo == i}">
                                 <li data-page-num="${i}" class="page-item hover">
                                     <a class="page-link"
-                                       href="/index?pageNo=${i}&amount=${p.amount}#posting"><span>${i}</span></a>
+                                       href="/index?pageNo=${i}&amount=${p.amount}&searchName=${searchName}#posting"><span>${i}</span></a>
                                 </li>
                             </c:if>
                         </c:forEach>
 
                         <c:if test="${maker.page.pageNo != maker.finalPage}">
                             <li class="page-item cm next"><a class="page-link"
-                                                     href="/index?pageNo=${maker.finalPage}&amount=${p.amount}#posting"><span></span></a>
+                                                     href="/index?pageNo=${maker.finalPage}&amount=${p.amount}&searchName=${searchName}#posting"><span></span></a>
                             </li>
                         </c:if>
 

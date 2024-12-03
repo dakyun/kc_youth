@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    history.pushState({}, '', "/index");
+
     $(".event-useguide .title").on("click", function(e) {
         $(this).toggleClass("open").siblings().toggleClass("open");
     });
@@ -346,17 +348,14 @@ function executeSearch() {
     }
 
     $.ajax({
-        url: `/reply/${encodeURIComponent(searchName)}`, // 검색어를 URL에 포함
+        url: `/reply?searchName=${encodeURIComponent(searchName)}`, // 검색어를 URL에 포함
         type: 'GET',
         success: function (response) {
             if (response.success) {
-                if (response.replyList.length === 0) {
+                if (response.replyCount == 0) {
                     alert("검색 결과가 없습니다.");
                 } else {
-                    renderSearchResults(response.replyList); // 검색 결과 렌더링
-                    if (response.replyCount !== undefined) { // 검색 결과 개수 화면에 렌더링
-                        $('.top-info h5').text(`검색 결과 (${response.replyCount})`);
-                    }
+                    location.href = '/index?pageNo=1&amount=12&searchName='+searchName+"#posting";
                 }
             } else {
                 alert(response.message || "검색 실패");
@@ -393,6 +392,10 @@ function renderSearchResults(replyList) {
     });
     // 동적으로 추가된 요소에 대해 높이 계산 및 클래스 적용
     calHeight();
+}
+
+function renderSearchPaging(maker) {
+
 }
 
 // 글 등록 시 입력값 검증

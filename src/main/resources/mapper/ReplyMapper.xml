@@ -15,6 +15,7 @@
     <select id="findAll" resultType="Reply">
         SELECT *
         FROM reply
+        WHERE name LIKE CONCAT('%', #{searchByName}, '%')
         ORDER BY localDateTime DESC
         OFFSET #{page.pageStart} ROWS
         FETCH NEXT #{page.amount} ROWS ONLY
@@ -23,6 +24,7 @@
     <select id="countAll">
         SELECT COUNT(*)
         FROM reply
+        WHERE name LIKE CONCAT('%', #{searchByName}, '%')
     </select>
 
     <select id="selectPasswordById">

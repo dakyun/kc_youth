@@ -32,19 +32,23 @@ public class MainController {
     }
 
     @GetMapping("/index")
-    public String index(Model model, @ModelAttribute("p") Page page, HttpSession session) {
+    public String index(Model model, @ModelAttribute("p") Page page, @RequestParam(value="searchName", defaultValue="") String searchName, HttpSession session) {
         log.info("index로 요청 들어옴!");
         log.info("pageNo: {}", page.getPageNo());
+        if(!searchName.equals("")) {
+            log.info("searchName: {}", searchName);
+        }
 
         // reply list를 요청하는 로직 (페이지 당 12개 보여주기)
-        List<ReplyListResponseDTO> replyList = replyService.findAll(page);
+        List<ReplyListResponseDTO> replyList = replyService.findAll(page, searchName);
 
         // 전체 reply 갯수를 요청하는 로직
-        int replyCount = replyService.countAll();
+        int replyCount = replyService.countAll(searchName);
 
         // 페이지 버튼 만들기
         PageMaker pageMaker = new PageMaker(page, replyCount);
 
+        model.addAttribute("searchName", searchName);
         model.addAttribute("replyList", replyList);
         model.addAttribute("replyCount", replyCount);
         model.addAttribute("maker", pageMaker);
@@ -62,17 +66,16 @@ public class MainController {
         return "redirect:/index#section4";
     }
 
-    @GetMapping("/reply/{searchName}")
+    @GetMapping("/reply")
     @ResponseBody
-    public ResponseEntity<?> replySearchByName(@PathVariable String searchName) {
+    public ResponseEntity<?> replySearchByName(@RequestParam(value="searchName", defaultValue="") String searchName) {
         log.info("/reply/{searchName}으로 요청 들어옴! 검색어 : " + searchName);
 
-        List<ReplyListResponseDTO> searchResultList = replyService.findByName(searchName);
+        int replyCount = replyService.countAll(searchName);
 
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
-        response.put("replyList",  searchResultList);
-        response.put("replyCount", searchResultList.size());
+        response.put("replyCount", replyCount);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
@@ -96,7 +99,7 @@ public class MainController {
             if (isDeleted) {
                 response.put("success", true);
                 response.put("message", "삭제되었습니다.");
-                response.put("replyCount", replyService.countAll());
+                response.put("replyCount", replyService.countAll(""));
             } else {
                 response.put("success", false);
                 response.put("message", "게시물 삭제에 실패했습니다. 관리자에게 문의해 주세요.");
