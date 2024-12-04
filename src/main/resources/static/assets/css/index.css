@@ -12,16 +12,19 @@ html {
   font-size: 62.5%;
   color: #222;
 }
-@media screen and (max-width: 750px) {
-  html {
-    font-size: 50%;
-  }
-}
 
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+@media screen and (max-width: 750px) {
+  body {
+    height: 100%;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 ol, ul, li {
@@ -446,6 +449,12 @@ header #top-menu {
   background: url(../images/book.jpg) no-repeat center center/100%;
   position: relative;
 }
+@media screen and (max-width: 750px) {
+  #resigter a {
+    width: 10.6666666667vw;
+    height: 10.6666666667vw;
+  }
+}
 #resigter a::before {
   content: "";
   display: inline-block;
@@ -456,6 +465,14 @@ header #top-menu {
   top: -60px;
   left: -17px;
   animation: moving 2s infinite ease-in-out;
+}
+@media screen and (max-width: 750px) {
+  #resigter a::before {
+    width: 24.9333333333vw;
+    height: 6.1333333333vw;
+    top: -8vw;
+    left: -2.2666666667vw;
+  }
 }
 @media screen and (max-width: 750px) {
   #resigter {
@@ -469,7 +486,7 @@ header #top-menu {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-1.3333333333vw);
   }
   100% {
     transform: translateY(0);
@@ -490,7 +507,7 @@ header #top-menu {
 @media screen and (max-width: 750px) {
   .quick-menu {
     bottom: 4vw;
-    right: 4vw;
+    right: 0vw;
   }
 }
 .quick-menu ul li {
@@ -971,6 +988,11 @@ header #top-menu {
 .sticky-parent {
   height: 480vh;
 }
+@media screen and (max-width: 750px) {
+  .sticky-parent {
+    height: auto;
+  }
+}
 
 .sticky {
   position: sticky;
@@ -978,6 +1000,13 @@ header #top-menu {
   max-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+@media screen and (max-width: 750px) {
+  .sticky {
+    position: static;
+    max-height: unset;
+    overflow: hidden;
+  }
 }
 
 .dim {
@@ -1081,12 +1110,17 @@ header #top-menu {
 .horizontal {
   display: flex;
 }
+@media screen and (max-width: 750px) {
+  .horizontal {
+    display: block;
+  }
+}
 
 @media (max-width: 750px) {
   .dim {
     display: block;
-    min-width: 100vw;
-    height: 100vh;
+    min-width: 100%;
+    height: 50vh;
   }
 }
 .flow-text {

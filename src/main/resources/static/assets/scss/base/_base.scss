@@ -10,15 +10,21 @@
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:62.5%;color:#222;
-        @include mq('small-screen-2'){
-            font-size:55%
-        };
-        @include mq('small-screen-3'){
-            font-size:50%
-        };
+        // @include mq('small-screen-2'){
+        //     font-size:55%
+        // };
+        // @include mq('small-screen-3'){
+        //     font-size:50%
+        // };
 }
 body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;box-sizing: border-box;
     overflow-x:hidden;
+    @include mq('small-screen-3'){
+        height:100%;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    };
 }
 ol,ul,li{list-style:none;}
 a{text-decoration:none;color:#222}

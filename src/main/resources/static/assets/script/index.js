@@ -111,25 +111,41 @@ $(document).ready(function () {
         });
     });
 });
+// const sections = $(".section");
+// const speed = 600;
+// let delTargetPostObj = null;
+//
+// //스크롤 애니메이션
+// $(window).on("scroll", function () {
+//     let scrollTop = $(window).scrollTop();
+//     sections.each(function (i) {
+//         if (scrollTop >= sections.eq(i).offset().top - speed) {
+//             sections.eq(i).find(".show-up").addClass("active");
+//         }else{
+//             sections.eq(i).find(".show-up").removeClass("active");
+//         }
+//     });
+// });
+
 const sections = $(".section");
 const speed = 600;
+const speedSmallScreen = 400; // 750px 이하일 때 적용될 속도
 let delTargetPostObj = null;
 
-//스크롤 애니메이션
+// 스크롤 애니메이션
 $(window).on("scroll", function () {
     let scrollTop = $(window).scrollTop();
+    let currentSpeed = $(window).width() <= 750 ? speedSmallScreen : speed;
+
     sections.each(function (i) {
-        if (scrollTop >= sections.eq(i).offset().top - speed) {
+        if (scrollTop >= sections.eq(i).offset().top - currentSpeed) {
             sections.eq(i).find(".show-up").addClass("active");
-        }else{
+        } else {
             sections.eq(i).find(".show-up").removeClass("active");
         }
     });
 });
 
-$('.sticky-parent').on('scroll', function() {
-    console.log('Scrolled horizontally to:', $(this).scrollLeft());
-});
 
 $(window).on("load", function () {
     setFlowBanner1();
@@ -298,27 +314,53 @@ $(document).ready(function() {
 });
 
 
+// // Adding scroll event listener
+// document.addEventListener('scroll', horizontalScroll);
+//
+// //Selecting Elements
+// let sticky = document.querySelector('.sticky');
+// let stickyParent = document.querySelector('.sticky-parent');
+//
+// let scrollWidth = sticky.scrollWidth;
+// let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
+//
+// //Scroll function
+// function horizontalScroll(){
+//
+//     //Checking whether the sticky element has entered into view or not
+//     let stickyPosition = sticky.getBoundingClientRect().top;
+//     if(stickyPosition > 1){
+//         return;
+//     }else{
+//         let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
+//         sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.85;
+//
+//     }
+// }
 // Adding scroll event listener
-document.addEventListener('scroll', horizontalScroll);
+document.addEventListener('scroll', function() {
+    if (window.innerWidth >= 1200) {
+        horizontalScroll();
+    }
+});
 
 //Selecting Elements
 let sticky = document.querySelector('.sticky');
 let stickyParent = document.querySelector('.sticky-parent');
 
 let scrollWidth = sticky.scrollWidth;
-let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
+let verticalScrollHeight = stickyParent.getBoundingClientRect().height - sticky.getBoundingClientRect().height;
 
 //Scroll function
-function horizontalScroll(){
+function horizontalScroll() {
 
     //Checking whether the sticky element has entered into view or not
     let stickyPosition = sticky.getBoundingClientRect().top;
-    if(stickyPosition > 1){
+    if (stickyPosition > 1) {
         return;
-    }else{
+    } else {
         let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
-        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.85;
-
+        sticky.scrollLeft = (scrollWidth / verticalScrollHeight) * (-scrolled) * 0.85;
     }
 }
 
