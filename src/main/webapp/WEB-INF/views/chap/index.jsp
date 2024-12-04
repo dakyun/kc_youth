@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>맑은샘광천교회 청년부 2024</title>
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/guide.css">
@@ -17,8 +18,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
     <script>
         let nowPageNo = '${maker.page.pageNo}';
@@ -86,100 +85,53 @@
     </div>
 </header>
 
-<%--<div class="sticky-parent">
+<div class="sticky-parent">
     <div class="sticky">
         <div class="horizontal"> <!--Horizantal conatiner with display flex-->
             <!--Content Start-->
-            <div class="dim empty" ></div>
-            <div class="dim" style="background-image:url(/assets/images/scroll01.jpg)"></div>
-            <div class="dim empty" ></div>
-            <div class="dim" style="background-image:url(/assets/images/scroll03.jpg)"></div>
-            <div class="dim empty" ></div>
-            <div class="dim" style="background-image:url(/assets/images/scroll06.jpg)"></div>
-            <div class="dim empty" ></div>
-            <div class="dim last" style="background-image:url(/assets/images/scroll05.jpg)"></div>
-            <!--Content End-->
-
+            <div class="dim n1 section" ><img src="/assets/images/scroll02.jpg"><p class="show-up">여호와께서 우리를 위하여<br>큰 일을 행하셨으니</p></div>
+            <div class="dim n2 section" ><img src="/assets/images/scroll03.jpg"><p class="show-up">우리는 기쁘도다</p></div>
+            <div class="dim n3 section" ><img src="/assets/images/scroll08.jpg"><p class="show-up">눈물을 흘리며<br>씨를 뿌리는 자는</p></div>
+            <div class="dim n4 section" ><img src="/assets/images/scroll06.jpg"><p class="show-up">기쁨으로 거두리로다<span>시편 126편 3절과 5절</span></p></div>
+            <div class="dim n5 section" ><img src="/assets/images/scroll05.jpg"><p class="show-up">맑은샘광천교회 청년부<br>2024 연말결산</p><span class="scrolldown"></span></div>
         </div>
     </div>
-</div>--%>
-<div id="scrollEvt">
-    <div class="tit_area" data-aos="fade-right">
-        <p class="tit">함께 웃고 함께 우는<br>청년부 공동체 2024</p>
-    </div>
-
-    <div class="img_slide_wrap">
-        <ul class="img_slide">
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll03.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll07.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll08.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll02.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll01.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll02.jpg">
-                </a>
-            </li>
-            <li>
-                <a href="#;">
-                    <img src="/assets/images/scroll05.jpg">
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="bg">
-        <p class="flow_txt">2024 KWANGCHUN YOUTH RECAP</p>
-    </div>
 </div>
+
 <div class="container bg-bk">
     <div id="album-about" class="section">
-        <div class="title-box">
+        <div class="title-box show-up">
             <div class="left">
-                <span class="sub">송년사 부제목 부제목</span>
-                <strong>Adieu! 2024 제목</strong>
+                <span class="sub">Letter from Ki-do</span>
+                <strong>사랑하는 맑은샘광천교회 청년 여러분!</strong>
             </div>
         </div>
         <p class="show-up delay">
-            대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 국무위원은 국무총리의 제청으로 대통령이 임명한다. 모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다. 형사피고인은 유죄의 판결이 확정될 때까지는 무죄로 추정된다.
+            2024년 한 해 동안 우리 청년부를 인도하시고 은혜로 채워주신 하나님께 모든 감사와 찬양을 올려드립니다.<br/>
+            시편 126편의 고백처럼 2024년은 하나님께서 우리 공동체에 큰 일을 행하셨던 축복의 시간임을 고백합니다.
         </p>
         <p class="show-up delay-more">
-            대법원장의 임기는 6년으로 하며, 중임할 수 없다. 대한민국의 영토는 한반도와 그 부속도서로 한다. 대통령의 임기는 5년으로 하며, 중임할 수 없다. 대한민국의 국민이 되는 요건은 법률로 정한다. 국무회의는 대통령·국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다. 대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다.
+            올해 우리는 영적인 깊이와 외형적인 성장 모두에서 하나님의 손길을 경험했습니다. 정말 많은 새가족들이 공동체 안에서 함께 뜨겁게 예배하며 신앙생활을 하게 되었습니다.
+            또한 많은 청년들의 섬김과 헌신으로 말미암아 수련회를 비롯하여 크고 작은 사역들 모두 풍성한 은혜가 넘치는 시간이었습니다. 이는 하나님께서 우리에게 허락하신 특별한 선물이자, 여러분 모두의 섬김과 헌신이 만들어낸 아름다운 열매라고 믿습니다. 공동체를 위해서 아낌없는 사랑과 수고와 기도로 동역해준 모두에게 감사의 마음을 전합니다.
+        </p>
+        <p class="show-up delay-more2">
+            다가오는 새해에도 하나님께서 예비하신 더 큰 은혜와 계획을 기대하며 믿음의 발걸음을 함께 내딛기를 소망합니다.
+            서로를 더 깊이 사랑하고 하나님의 뜻을 이루어가는 아름다운 청년부로 성장하길 기대합니다. 사랑하고 축복합니다.
         </p>
         <br><br><p class="show-up delay-more">- 맑은샘광천교회 청년부 디렉터 김기도 목사 -</p>
     </div>
 </div>
 <main>
-    <section class="wrapper bg-wt">
+    <section class="wrapper bg-wt section">
         <div class="title-box">
             <div class="left">
-                <span class="sub">올 한해 청년부 사역 어떤 것들이 있었나요?</span>
-                <strong>What We Did in 2024</strong>
+                <span class="sub show-up">올 한해 청년부 사역 어떤 것들이 있었나요?</span>
+                <strong class="show-up delay">What We Did in 2024</strong>
             </div>
-            <a href="#;" onclick="alert('12월 15일 공개 예정입니다!')" class="org-btn"><span>연말결산 사진첩 드라이브 바로가기</span></a>
+            <a href="#;" onclick="alert('12월 15일 공개 예정입니다!')" class="org-btn show-up delay"><span>연말결산 사진첩 드라이브 바로가기</span></a>
         </div>
 
-        <div class="flow-text n1">
+        <div class="flow-text n1 show-up delay-more">
             <ul class="list">
                 <li class="item n1">#1-2청 겨울수련회</li>
                 <li class="item n2">#겨울 연탄봉사</li>
@@ -189,7 +141,7 @@
                 <li class="item n6">#한양 도성 서울 트래킹</li>
             </ul>
         </div>
-        <div class="flow-text n2">
+        <div class="flow-text n2 show-up delay-more">
             <ul class="list">
                 <li class="item n1">#찬양예배</li>
                 <li class="item n2">#홈커밍데이</li>
@@ -200,7 +152,7 @@
                 <li class="item n7">#기독교 역사 탐방</li>
             </ul>
         </div>
-        <div class="flow-text n3">
+        <div class="flow-text n3 show-up delay-more">
             <ul class="list">
                 <li class="item n1">#양육훈련</li>
                 <li class="item n5">#바베큐파티</li>
@@ -214,12 +166,12 @@
     <div id="discography" class="section bg-grey qmenu">
         <div class="title-box">
             <div class="left">
-                <span class="sub">올해 사역 리뷰 & 베스트영상을 모아봤어요</span>
-                <strong>Check on Youtube!</strong>
+                <span class="sub show-up">올해 사역 리뷰 & 베스트영상을 모아봤어요</span>
+                <strong class="show-up delay">Check on Youtube!</strong>
             </div>
-            <a target="_blank" href="https://www.youtube.com/@%EB%A7%91%EC%9D%80%EC%83%98%EA%B4%91%EC%B2%9C%EA%B5%90%ED%9A%8C%EC%B2%AD%EB%85%84%EB%B6%80" class="org-btn"><span>청년부 유튜브 바로가기</span></a>
+            <a target="_blank" href="https://www.youtube.com/@%EB%A7%91%EC%9D%80%EC%83%98%EA%B4%91%EC%B2%9C%EA%B5%90%ED%9A%8C%EC%B2%AD%EB%85%84%EB%B6%80" class="org-btn show-up delay"><span>청년부 유튜브 바로가기</span></a>
         </div>
-        <div class="container show-up delay">
+        <div class="container show-up delay-more">
             <ul id="discography-albums">
                 <li class="album-info">
                     <a target="_blank" href="https://youtu.be/hr64qwRgM84?si=fewY_hS4Pu3-mY8z"><img src="/assets/images/yt04.jpg" alt=""></a>
@@ -277,19 +229,19 @@
             </ul>
         </div>
     </div>
-    <section id="section3" class="event wrapper bg-bk qmenu">
+    <section id="section3" class="event wrapper bg-bk qmenu section">
         <div class="title-box center">
             <div class="center">
-                <span class="sub">2024 연말결산 이벤트</span>
-                <strong>Share Your Message!</strong>
+                <span class="sub show-up">2024 연말결산 이벤트</span>
+                <strong class="show-up delay">Share Your Message!</strong>
             </div>
-            <p>올 한해 개인의 삶 또는 공동체에서 느낀 감사제목을 나눠주세요<br>
+            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀 감사제목을 나눠주세요<br>
                 12월 29일(주) 인스타그램 라이브 추첨을 통해 2025 말씀노트를 선물로 드려요!
                 <span class="mini">* 자세한 참여방법 및 유의사항은 하단 '꼭! 확인하세요!'를 참고하세요</span>
             </p>
         </div>
-        <span class="gift"><img src="/assets/images/event_item01.png" alt=""></span>
-        <div class="join">
+        <span class="gift show-up delay-more"><img src="/assets/images/event_item01.png" alt=""></span>
+        <div class="join show-up delay-more2">
             <h5>HOW TO JOIN</h5>
             <ul>
                 <li>
@@ -478,15 +430,15 @@
             </div>
         </div>
     </div>
-    <section id="section2" class="news wrapper bg-wt qmenu">
+    <section id="section2" class="news wrapper bg-wt qmenu section">
         <div class="title-box">
             <div class="left">
-                <span class="sub">두근두근 1분기 카드뉴스 준비중!</span>
-                <strong>Card News of 1Q</strong>
+                <span class="sub show-up">두근두근 1분기 카드뉴스 준비중!</span>
+                <strong class="show-up delay">Card News of 1Q</strong>
             </div>
-            <a target="_blank" href="https://www.instagram.com/kwangchun_youth/" class="org-btn"><span>청년부 인스타그램 바로가기</span></a>
+            <a target="_blank" href="https://www.instagram.com/kwangchun_youth/" class="org-btn show-up delay"><span>청년부 인스타그램 바로가기</span></a>
         </div>
-        <div class="card-swiper">
+        <div class="card-swiper show-up delay-more">
             <div class="swiper-wrapper">
                 <div class="swiper-slide coming">
                     <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>1분기 사역 카드뉴스가 다음주 주일(12/15)에 공개됩니다!</span></div>
@@ -537,27 +489,27 @@
             </div>
         </div>--%>
     </section>
-    <section class="mimo wrapper bg-org">
+    <section class="mimo wrapper bg-org section">
         <!-- REF:소이정 -->
         <div class="title-box center">
-            <div class="center">
+            <div class="center show-up">
                 <span class="sub">맑은샘광천교회 청년부에 대해 더 알고 싶으시다면?</span>
                 <strong>Follow Our SNS!</strong>
             </div>
-            <a href="" class="mimo-btn"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
-            <a href="" class="mimo-btn"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
+            <a href="" class="mimo-btn show-up delay"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
+            <a href="" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
         </div>
         <div id="mimoCanvas"></div>
     </section>
 </main>
-<footer class="section">
+<footer>
     <div class="container">
         <div class="footer-box">
-            <div class="sns-box show-up">
+            <div class="sns-box">
                 <h3>당신 근처의 좋은 교회, 맑은샘광천교회 청년부!</h3>
                 <p>예배장소 | 맑은샘광천교회 2층 그레이스홀, 상월곡역 3번 출구<br>주일예배 | 주일 오후 2시<br></p>
             </div>
-            <div id="copyright" class="show-up delay">
+            <div id="copyright">
                 <p>해당 페이지는 2025년 1월 31일까지 운영되며 <br />이벤트 참여 시 제공받은 정보들은 페이지 종료와 함께 소멸될 예정입니다.<br><br>© 2024 맑은샘광천교회 청년부 디자인팀</p>
             </div>
         </div>
@@ -807,30 +759,10 @@
             // 기본 동작을 막지 않도록 주석 처리 또는 제거
             // event.preventDefault();
         });
-
-        gsap.registerPlugin(ScrollTrigger);
-        const pinnedImageWrappers = document.querySelectorAll('#scrollEvt');
-        if (pinnedImageWrappers) {
-            pinnedImageWrappers.forEach((wrapper) => {
-                const inner = wrapper.querySelector('#scrollEvt .img_slide');
-                gsap.to(inner, {
-                    x: () => -(inner.scrollWidth - document.documentElement.clientWidth) + 'px',
-                    ease: 'none',
-                    scrollTrigger: {
-                        start: 'top',
-                        trigger: wrapper,
-                        pin: true,
-                        scrub: 30,
-                        invalidateOnRefresh: true,
-                        pinSpacing : true,
-                        end: () => `+=${inner.offsetWidth}`
-                    }
-                });
-            });
-        }
     });
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="/assets/script/index.js"></script>
 </body>
 </html>
