@@ -361,37 +361,6 @@ function executeSearch() {
     });
 }
 
-// 검색 결과를 렌더링하는 함수
-function renderSearchResults(replyList) {
-    const postContainer = $(".post"); // 게시물 리스트가 들어가는 컨테이너
-    postContainer.empty(); // 기존 게시물 제거
-
-    if (replyList.length === 0) {
-        postContainer.append("<li>검색 결과가 없습니다.</li>");
-        return;
-    }
-
-    replyList.forEach(reply => {
-        const postItem = `
-            <li class="post-item ${reply.background}" data-id="${reply.id}">
-                <p><span class="inner"><span class="contain"><span class="more">더보기</span>${reply.content}</span></span></p>
-                <div class="bottom-area">
-                    <span class="writer">${reply.name}&nbsp;${reply.generation.substring(2)}</span>
-                    <div class="time"><span>${reply.regDate}</span></div>
-                </div>
-                <a class="delete"><span>삭제</span></a>
-            </li>
-        `;
-        postContainer.append(postItem);
-    });
-    // 동적으로 추가된 요소에 대해 높이 계산 및 클래스 적용
-    calHeight();
-}
-
-function renderSearchPaging(maker) {
-
-}
-
 // 글 등록 시 입력값 검증
 const checkResultList = [false, false, false, false, false];
 

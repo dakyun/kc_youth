@@ -55,7 +55,7 @@ public class ReplyWriteRequestDTO {
 
     // bg1, bg2, bg3, bg4, bg5와 같은 랜덤 배경값을 생성하는 메소드
     private String makeRandomBackground() {
-        return "bg" + (random.nextInt(5) + 1);
+        return "bg" + (random.nextInt(4) + 1);
     }
 }
 

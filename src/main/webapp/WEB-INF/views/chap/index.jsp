@@ -421,7 +421,12 @@
 
             </div>
             <div class="top-info" id="posting">
-                <h5>전체 (${replyCount})<a href="#;" class="back-to"><span>전체보기</span></a></h5>
+                <c:if test="${searchName.isEmpty()}">
+                    <h5>전체 (${replyCount})</h5>
+                </c:if>
+                <c:if test="${!searchName.isEmpty()}">
+                    <h5>검색 결과 (${replyCount})<a href="/index?pageNo=1&amount=12#posting" class="back-to"><span>전체 보기</span></a></h5>
+                </c:if>
                 <div class="search">
                     <input type="text" class="insearch" title="검색어 입력" placeholder="이름으로 작성 글 찾기" value="${searchName}">
                     <a class="in-btn">검색</a>
@@ -815,7 +820,7 @@
                         start: 'top',
                         trigger: wrapper,
                         pin: true,
-                        scrub: 1,
+                        scrub: 30,
                         invalidateOnRefresh: true,
                         pinSpacing : true,
                         end: () => `+=${inner.offsetWidth}`
@@ -824,8 +829,6 @@
             });
         }
     });
-
-
 </script>
 
 <script src="/assets/script/index.js"></script>
