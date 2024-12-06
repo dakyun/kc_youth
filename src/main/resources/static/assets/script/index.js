@@ -132,8 +132,6 @@ const speed = 600;
 const speedSmallScreen = 400; // 750px 이하일 때 적용될 속도
 let delTargetPostObj = null;
 
-alert("zzz");
-
 // 스크롤 애니메이션
 $(window).on("scroll", function () {
     let scrollTop = $(window).scrollTop();
