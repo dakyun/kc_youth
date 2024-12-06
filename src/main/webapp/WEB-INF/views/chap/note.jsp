@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 말씀노트 판매</title>
-    <link rel="stylesheet" href="/assets/css/resetfornote.css">
-    <link rel="stylesheet" href="/assets/css/note.css">
-    <script src="/assets/script/note.js"></script>
+    <link rel="stylesheet" href="/assets/css/resetfornote.css?ts=${T(java.lang.System).currentTimeMillis()}">
+    <link rel="stylesheet" href="/assets/css/note.css?ts=${T(java.lang.System).currentTimeMillis()}">
+    <script src="/assets/script/note.js?ts=${T(java.lang.System).currentTimeMillis()}"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 </head>
 <header>
