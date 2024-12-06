@@ -399,6 +399,8 @@ header #top-menu {
   margin: 0 1.25rem;
 }
 .slide-text-wrapper .slide-container .slide li .item {
+  width: -moz-max-content;
+  width: max-content;
   height: 100%;
   color: #fff;
   font-size: 270px;
