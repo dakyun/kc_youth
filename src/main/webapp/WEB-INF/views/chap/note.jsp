@@ -63,7 +63,7 @@
             <div class="radio">
                 <label class="flex">
                     <input type="radio" onchange="setDisplay2()" name="receive" value="C" checked />
-                    <span class="word"><strong>현장수령</strong><span class="mini">맑은샘광천교회 주일 청년부예배 전후 본당 로비<br>(12/15~12/31)</span></span>
+                    <span class="word"><strong>현장수령</strong><span class="mini">맑은샘광천교회 주일 청년부예배 전후 본당 로비<br>(12/15~12/31)<br>*자세한 일정은 추후 공지될 예정입니다.</span></span>
                 </label>
                 <label class="flex">
                     <input type="radio" onchange="setDisplay2()" id="parcel" name="receive" value="D" />
@@ -75,14 +75,23 @@
             </div>
         </div>
         <button type="button" id="noteApply" class="pp-btn"><span>사전예약 신청하기</span></button>
-        <span class="alert">* 하단 신청하기 버튼 제출 시 개인정보 수집에 동의한 것으로 간주됩니다.</span>
+        <span class="alert">*하단 신청하기 버튼 제출 시 개인정보수집에 동의한 것으로 간주됩니다.</span>
+    </div>
+    <div class="margin-box"></div>
+    <div class="note-box">
+        <div class="row payment">
+            <span class="s-txt">결제 방법</span>
+            <a class="kakaobtn" href="https://qr.kakaopay.com/Ej9IbPcPg"><span class="logo">물구나무이야기로 송금됩니다.</span><span class="txt">카카오페이</span></a>
+            <p>무통장입금 : <span id="copyButton"><span id="copysource">3333-28-8190208 카카오뱅크</span><span class="copyment">복사하기</span></span><br>
+                <span style="display:inline-block;width:19.3vw"></span>(예금주 : 물구나무이야기)</p></p>
+        </div>
     </div>
     <div class="margin-box"></div>
     <div class="q-box">
         <div class="img"> <img src="/assets/images/note_02.jpg"></div>
         <ul>
-            <li><a href="">말씀노트가 궁금하다면?<span class="arrow"></span></a></li>
-            <li><a href="">2024 말씀노트 판매수익금 후원 결과 보고<span class="arrow"></span></a></li>
+            <li><a href="https://m.site.naver.com/1yg3J">말씀노트가 궁금하다면?<span class="arrow"></span></a></li>
+            <li><a href="https://www.instagram.com/p/C96ZwIszhlK/?img_index=1">2024 말씀노트 판매수익금 후원 결과 보고<span class="arrow"></span></a></li>
         </ul>
     </div>
     <div class="margin-box"></div>
@@ -90,5 +99,32 @@
 <footer class="section">
      <a href="http://pf.kakao.com/_xcBxouM"><img src="/assets/images/note_03.jpg"></a>
 </footer>
+<script>
+    /* contact copy 버튼 */
+    document.execCommand("copy");
+    var button = document.getElementById("copyButton"),
+        contentHolder = document.getElementById("copysource");
+
+    button.addEventListener(
+        "click",
+        function () {
+            var range = document.createRange(),
+                selection = window.getSelection();
+
+            selection.removeAllRanges();
+
+            range.selectNodeContents(contentHolder);
+
+            selection.addRange(range);
+
+            document.execCommand("copy");
+
+            selection.removeAllRanges();
+
+            alert('계좌번호가 복사되었습니다!')
+        },
+        false,
+    );
+</script>
 </body>
 </html>

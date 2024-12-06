@@ -36,7 +36,7 @@ img{
         strong{
             color:#FFAE40;
             font-family: 'yg-jalnan';
-            font-size:px(44);
+            font-size:px(40);
         }
         span{
             color:#4863AA;
@@ -81,7 +81,7 @@ img{
                 font-weight:400;
                 font-size:px(26);
                 color:#7e7e7e;
-                line-height:px(30);
+                line-height:1.5;
               }
               .word{
                 display:flex;
@@ -93,6 +93,7 @@ img{
             label {
                 line-height:px(50);
                 width:95%;
+                margin-bottom:4vw;
                 span{
                     font-size:px(28);
                     color:#333;
@@ -162,11 +163,59 @@ img{
             &.last{
               margin-bottom:px(50);
               .radio{
+                margin-top:px(50);
                 .flex{
                   display:flex;
                   gap:px(10);
                   line-height:unset;
                   margin-bottom:px(30);
+                }
+              }
+            }
+            &.payment{
+              .s-txt{
+                margin-top:px(40);
+              }
+              .kakaobtn{
+                width: 100%;
+                height:px(90);
+                border-radius:px(16);
+                display:flex;
+                align-items:center;
+                background:#FFEB00 url(../images/kakopay.png) no-repeat px(15) center / px(110);
+                justify-content: space-between;
+                .logo{
+                  font-size:px(20);
+                  color:#818181;
+                  font-weight:300;
+                  margin-left:px(120);
+                }
+                .txt{
+                  font-size:px(28);
+                  color:#111;
+                  font-weight:600;
+                  margin-right:px(30);
+                }
+              }
+              p{
+                font-size:px(28);
+                color:#333;
+                margin-top:px(20);
+                line-height:px(36);
+                margin-left:px(20);
+                #copyButton{
+                  .copyment{
+                    width:px(100);
+                    height:px(36);
+                    border-radius:px(50);
+                    border:1px solid #ccc;
+                    color:#7e7e7e;
+                    line-height:px(36);
+                    text-align:center;
+                    font-size:px(22);
+                    display:inline-block;
+                    margin-left:px(12);
+                  }
                 }
               }
             }

@@ -32,7 +32,7 @@ img {
 #noteSell h2 strong {
   color: #FFAE40;
   font-family: "yg-jalnan";
-  font-size: 5.8666666667vw;
+  font-size: 5.3333333333vw;
 }
 #noteSell h2 span {
   color: #4863AA;
@@ -80,7 +80,7 @@ img {
   font-weight: 400;
   font-size: 3.4666666667vw;
   color: #7e7e7e;
-  line-height: 4vw;
+  line-height: 1.5;
 }
 #noteSell .note-box .row .radio .word {
   display: flex;
@@ -91,6 +91,7 @@ img {
 #noteSell .note-box .row label {
   line-height: 6.6666666667vw;
   width: 95%;
+  margin-bottom: 4vw;
 }
 #noteSell .note-box .row label span {
   font-size: 3.7333333333vw;
@@ -152,11 +153,57 @@ img {
 #noteSell .note-box .row.last {
   margin-bottom: 6.6666666667vw;
 }
+#noteSell .note-box .row.last .radio {
+  margin-top: 6.6666666667vw;
+}
 #noteSell .note-box .row.last .radio .flex {
   display: flex;
   gap: 1.3333333333vw;
   line-height: unset;
   margin-bottom: 4vw;
+}
+#noteSell .note-box .row.payment .s-txt {
+  margin-top: 5.3333333333vw;
+}
+#noteSell .note-box .row.payment .kakaobtn {
+  width: 100%;
+  height: 12vw;
+  border-radius: 2.1333333333vw;
+  display: flex;
+  align-items: center;
+  background: #FFEB00 url(../images/kakopay.png) no-repeat 2vw center/14.6666666667vw;
+  justify-content: space-between;
+}
+#noteSell .note-box .row.payment .kakaobtn .logo {
+  font-size: 2.6666666667vw;
+  color: #818181;
+  font-weight: 300;
+  margin-left: 16vw;
+}
+#noteSell .note-box .row.payment .kakaobtn .txt {
+  font-size: 3.7333333333vw;
+  color: #111;
+  font-weight: 600;
+  margin-right: 4vw;
+}
+#noteSell .note-box .row.payment p {
+  font-size: 3.7333333333vw;
+  color: #333;
+  margin-top: 2.6666666667vw;
+  line-height: 4.8vw;
+  margin-left: 2.6666666667vw;
+}
+#noteSell .note-box .row.payment p #copyButton .copyment {
+  width: 13.3333333333vw;
+  height: 4.8vw;
+  border-radius: 6.6666666667vw;
+  border: 1px solid #ccc;
+  color: #7e7e7e;
+  line-height: 4.8vw;
+  text-align: center;
+  font-size: 2.9333333333vw;
+  display: inline-block;
+  margin-left: 1.6vw;
 }
 #noteSell .pp-btn {
   width: 100%;

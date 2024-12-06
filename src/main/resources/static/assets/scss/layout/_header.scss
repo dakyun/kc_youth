@@ -159,8 +159,12 @@ header {
     width:80px;
     height:80px;
     border-radius:50%;
-    background:url(../images/book.jpeg) no-repeat center center / 100%;
+    background:url(../images/book.jpg) no-repeat center center / 100%;
     position:relative;
+    @include mq('small-screen-3'){
+      width:px(80);
+      height:px(80)
+    };
     &::before{
       content:'';
       display:inline-block;
@@ -171,6 +175,12 @@ header {
       top:-60px;
       left:-17px;
       animation:moving 2s infinite ease-in-out;
+      @include mq('small-screen-3'){
+        width:px(187);
+        height:px(46);
+        top:px(-60);
+        left:px(-17)
+      };
     }
   }
   @include mq('small-screen-3'){
@@ -183,7 +193,7 @@ header {
     transform:translateY(0);
   }
   50%{
-    transform:translateY(-10px);
+    transform:translateY(px(-10));
   }
   100%{
     transform:translateY(0);
@@ -202,7 +212,7 @@ header {
   z-index:50;
   @include mq('small-screen-3'){
     bottom:px(30);
-    right:px(30)
+    right:px(0)
   };
   ul{
     li{
