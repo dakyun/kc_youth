@@ -5,9 +5,15 @@ $(document).ready(function () {
         $(this).toggleClass("open").siblings().toggleClass("open");
     });
 
+    $('.nav-link').on('click', function(event) {
+        //event.preventDefault(); // 링크의 기본 동작을 막음
+        $('#nav-toggle').prop('checked', false); // 체크 해제
+    });
+
     // 스크롤 이벤트
     const part = $('.qmenu');
     const speed = 160;
+    const speed2 = 160;
 
     $(window).on('scroll',function(){
         let scrollTop = $(window).scrollTop();
@@ -15,6 +21,11 @@ $(document).ready(function () {
         part.each(function (i) {
             if (scrollTop >= part.eq(i).offset().top - speed) {
                 $(".quick-menu li").eq(i).addClass("on").siblings().removeClass("on");
+            }
+            if (scrollTop >= part.eq(0).offset().top + speed2) {
+                $("#resigter").addClass('none');
+            }else{
+                $("#resigter").removeClass('none');
             }
         });
     })
@@ -25,17 +36,35 @@ $(document).ready(function () {
         $("html, body").animate({scrollTop: $(this.hash).offset().top + 20}, 300);
     });
 
-    $("#discography-albums").bxSlider({
-        minSlides: 3,
-        maxSlides: 3,
-        moveSlides: 1,
-        slideMargin: 80,
-        pager: false,
-        controls: false,
-        slideWidth: 500,
-        hideControlOnEnd: true,
-        infiniteLoop: false,
+    // $("#discography-albums").bxSlider({
+    //     minSlides: 3,
+    //     maxSlides: 3,
+    //     moveSlides: 1,
+    //     slideMargin: 80,
+    //     pager: false,
+    //     controls: false,
+    //     slideWidth: 500,
+    //     hideControlOnEnd: true,
+    //     infiniteLoop: false,
+    // });
+    var ytSwiper = new Swiper('.ytSwiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        //centeredSlides: true,
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            750: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        }
     });
+
     const topSwiper = new Swiper(".top-img", {
         loop: true,
         autoplay: {
@@ -45,11 +74,15 @@ $(document).ready(function () {
         parallax: true,
         effect: "fade",
         allowTouchMove: false,
+        observer: true,
+        observeParents: true,
     });
     const newsSwiper = new Swiper(".card-swiper", {
         effect: "cards",
         grabCursor: true,
         allowTouchMove : false,
+        observer: true,
+        observeParents: true,
     });
 
     // 삭제 버튼 클릭 시 팝업 열기
@@ -129,7 +162,7 @@ $(document).ready(function () {
 
 const sections = $(".section");
 const speed = 600;
-const speedSmallScreen = 400; // 750px 이하일 때 적용될 속도
+const speedSmallScreen = 500; // 750px 이하일 때 적용될 속도
 let delTargetPostObj = null;
 
 // 스크롤 애니메이션
@@ -140,8 +173,10 @@ $(window).on("scroll", function () {
     sections.each(function (i) {
         if (scrollTop >= sections.eq(i).offset().top - currentSpeed) {
             sections.eq(i).find(".show-up").addClass("active");
+            sections.eq(i).find(".imgch").addClass("active");
         } else {
             sections.eq(i).find(".show-up").removeClass("active");
+            sections.eq(i).find(".imgch").removeClass("active");
         }
     });
 });
