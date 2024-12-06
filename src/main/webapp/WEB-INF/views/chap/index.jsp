@@ -763,6 +763,6 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-<script src="/assets/script/index.js"></script>
+<script src="/assets/script/index.js?ts=${System.currentTimeMillis()}"></script>
 </body>
 </html>
