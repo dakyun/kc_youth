@@ -22,6 +22,7 @@
     <script>
         let nowPageNo = '${maker.page.pageNo}';
         let searchName = '${searchName}';
+        alert('test');
     </script>
 </head>
 <body>
