@@ -59,6 +59,14 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+tasks.named('bootRun') {
+    sourceResources(sourceSets.main)
+}
+
+tasks.named('processResources') {
+    outputs.upToDateWhen { false }
+}
+
 // Sass 컴파일 태스크 추가
 //task compileSass(type: Exec) {
 //    def sassExecutable = 'node_modules/.bin/sass'
