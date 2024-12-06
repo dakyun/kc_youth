@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>맑은샘광천교회 청년부 2024</title>
-    <link rel="stylesheet" href="/assets/css/slick.css">
-    <link rel="stylesheet" href="/assets/css/guide.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/slick.css?ts=${T(java.lang.System).currentTimeMillis()}">
+    <link rel="stylesheet" href="/assets/css/guide.css?ts=${T(java.lang.System).currentTimeMillis()}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?ts=${T(java.lang.System).currentTimeMillis()}"/>
+    <link rel="stylesheet" href="/assets/css/reset.css?ts=${T(java.lang.System).currentTimeMillis()}">
+    <link rel="stylesheet" href="/assets/css/index.css?ts=${T(java.lang.System).currentTimeMillis()}">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
