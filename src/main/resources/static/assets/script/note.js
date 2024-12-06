@@ -96,3 +96,18 @@ function resetForm() {
     document.querySelector(".etc.n1").style.display = "none";
     document.querySelector(".etc.n2").style.display = "none";
 }
+
+function setDisplay(){
+    if($('input:radio[id=q_etc]').is(':checked')){
+        $('.etc.n1').show();
+    }else{
+        $('.etc.n1').hide();
+    }
+}
+function setDisplay2(){
+    if($('input:radio[id=parcel]').is(':checked')){
+        $('.etc.n2').show();
+    }else{
+        $('.etc.n2').hide();
+    }
+}
