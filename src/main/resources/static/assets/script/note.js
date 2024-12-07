@@ -38,8 +38,10 @@ function applyNote() {
     let cnt = document.querySelector("input[name='quantity']:checked").value;
     const type = document.querySelector("input[name='receive']:checked").value;
     let addr = "";
+    let addr_add = "";
     if(type === "D") {
         addr = document.getElementById("addr").value.trim();
+        addr_add = document.getElementById("addr_add").value.trim();
     } else if(type === "I") {
         addr = document.getElementById("email").value.trim();
     }
@@ -55,7 +57,7 @@ function applyNote() {
     }
 
     // 필수 값 체크
-    if (!name || !contact || cnt <= 0 || !type || (type === "D" && !addr) || (type === "I" && !addr)) {
+    if (!name || !contact || cnt <= 0 || !type || (type === "D" && (!addr || !addr_add)) || (type === "I" && !addr)) {
         alert("모든 필수 입력값을 확인하세요.");
         return;
     }
@@ -67,7 +69,7 @@ function applyNote() {
         contact: contact,
         cnt: cnt,
         type: type,
-        addr: addr,
+        addr: addr + addr_add,
         use_yn: "Y",
         reg_dt: new Date().toISOString(),
         chg_dt: new Date().toISOString(),
@@ -102,6 +104,7 @@ function resetForm() {
     document.querySelector("input[name='receive'][value='C']").checked = true;
     document.getElementById("quantity_etc_input").value = "";
     document.getElementById("addr").value = "";
+    document.getElementById("addr_add").value = "";
     document.getElementById("email").value = "";
     document.querySelector(".etc.n1").style.display = "none";
     document.querySelector(".etc.n2").style.display = "none";
@@ -134,7 +137,9 @@ function execDaumPostcode() {
     new daum.Postcode({
         oncomplete: function(data) {
             var roadAddr = data.roadAddress;
+
             document.getElementById("addr").value = roadAddr;
+            document.getElementById('addr_add').focus();
         }
     }).open();
 }
