@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/note.css?ts=${System.currentTimeMillis()}">
     <script src="/assets/script/note.js?ts=${System.currentTimeMillis()}"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <header>
     <img src="/assets/images/note_01.jpg">
@@ -72,6 +73,7 @@
                 </label>
                 <span class="mini">택배발송을 원하시면 체크 후 주소를 입력해주세요.<br>*택배비 5권당 4,000원</span>
                 <div class="etc n2" style="display:none;">
+                    <button type="button" onclick="execDaumPostcode()">주소 검색</button>
                     <input id="addr" class="input-style yet" type="text" name="receive" placeholder="배송 받으실 주소를 정확히 입력하세요">
                 </div>
                 <label class="flex last">
