@@ -20,6 +20,7 @@
             cnt as '개수',
             case
                 when type = 'C' THEN '현장수령'
+                when type = 'I' THEN '아이패드 파일'
                 else '택배발송'
             end as '수령방법',
             addr as '주소',
