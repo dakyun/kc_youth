@@ -1,4 +1,7 @@
 .nav{
+    @include mq('small-screen-1'){
+        display:none
+    };
     &-check{
         display:none;
     }
@@ -7,54 +10,31 @@
         width:7rem;
         height:6rem;
         position:fixed;
-        bottom:4rem;
-        left:4rem;
+        top:px(20);
+        right:px(10);
         z-index:2000;
         cursor:pointer;
-        border-radius:2px;
+        border-radius:px(2);
         text-align:center;
-        @include mq('small-screen-1'){
-            bottom:91%;
-            left:90%;
-        };
-        @include mq('small-screen-2'){
-            position:absolute;
-            bottom:91%;
-            left:90%;
-        };
-        @include mq('small-screen-3'){
-            position:absolute;
-            bottom:91%;
-            left:80%;
-        };
     }
     &-bg{
-        width:7rem;
-        height:6rem;
-        position:fixed;
-        bottom:4rem;
-        left:4rem;
-        background-color:$color-secondary;
-        opacity:0;
-        z-index:1000;
-        border-radius:2px;
-        transition:all 0.8s;
-        @include mq('small-screen-1'){
-            bottom:91%;
-            left:90%;
-        };
-        @include mq('small-screen-2'){
-            bottom:91%;
-            left:90%;
-        };
-        @include mq('small-screen-3'){
-            bottom:91%;
-            left:80%;
-        };
+        height: 6rem;
+        position: fixed;
+        background-color: #ff6b1d;
+        z-index: 1000;
+        border-radius: 0.2666666667vw;
+        transition: all 0.8s;
+        width: 60%;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        opacity: 0;
+        display:none;
     }
     &-check:checked ~ &-bg{
-        transform:scale(80);
+        transform:scale(1);
         opacity:.9;
+        display:block;
     }
     &-icon{
         position:relative;
@@ -73,7 +53,7 @@
         }
         &,&::before,&::after{
             width:3rem;
-            height:2px;
+            height:px(4);
             background-color:$color-white;
             display:inline-block;
         }
@@ -98,24 +78,24 @@
     &-body{
         position:fixed;
         top:0;
-        left:-120%;
-        width:100vw;
-        height:100vh;
+        right:-120%;
         z-index:1500;
         opacity:0;
         transition:all .8s;
+        width:60%;
+        height:100%;
     }
     &-list{
         position:absolute;
-        left:50%;
-        top:50%;
-        transform:translate(-50%,-50%);
+        top:px(140);
+        right:0;
         width:100%;
-        text-align:center;
+        text-align:left;
     }
     &-link{
+        width:100%;
         display:inline-block;
-        font-size:3rem;
+        font-size:px(32);
         padding:1rem 2rem;
         color:$color-white;
         text-decoration:none;
@@ -123,12 +103,6 @@
         transition:all .4s;
         background-image:linear-gradient(120deg,transparent 0%, transparent 50%, $color-white 50%);
         background-size:225%;
-
-        &:hover{
-            color:$color-violet-1;
-            background-position:100%;
-            transform:translateX(1rem);
-        }
         span{
             display:inline-block;
             margin-right:1.5rem;
@@ -136,35 +110,6 @@
     }
     &-check:checked ~ &-body{
         opacity:1;
-        left:0;
-    }
-    & #logo a{
-        background:url(../images/rose_logo.png) no-repeat center /100%;
-        text-indent:-9999px;
-        width:124px;
-        height:110px;
-        display:block;
-        position:fixed;
-        top:3rem;
-        left:4rem;
-        z-index:999;
-        animation-name:moveInLeft;
-        animation-duration:1s;
-        animation-delay:.5s;
-        animation-fill-mode:backwards;
-        @include mq('small-screen-1'){
-            width:70px;
-            height:60px;
-        };
-        @include mq('small-screen-2'){
-            position:absolute;
-            width:70px;
-            height:60px;
-        };
-        @include mq('small-screen-3'){
-            position:absolute;
-            width:70px;
-            height:60px;
-        };
+        right:0;
     }
 }

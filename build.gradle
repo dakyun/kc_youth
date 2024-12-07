@@ -51,10 +51,20 @@ dependencies {
 
     implementation 'org.apache.poi:poi:5.2.3'
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
+
+    implementation 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.named('bootRun') {
+    sourceResources(sourceSets.main)
+}
+
+tasks.named('processResources') {
+    outputs.upToDateWhen { false }
 }
 
 // Sass 컴파일 태스크 추가
