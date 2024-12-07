@@ -292,12 +292,28 @@ $('#comment').keyup(function (e) {
 function calHeight() {
     $('ul .post-item .inner').each(function(){
         var rvTxt = $(this).find('.contain').height();
-        if(rvTxt < 144){
-            $(this).find('.more').hide();
-            $(this).css("pointer-events","none");
-        } else {
-            $(this).addClass('more-layer')
+        var rvTxt2 = $(this).find('.real').height();
+        var rvTxtInVw = rvTxt2 / 7.5; // rvTxt를 vw 값으로 환산
+
+        if (window.innerWidth >= 1200) {
+            // 1200px 이상 화면일 때
+            if(rvTxt < 144){
+                $(this).find('.more').hide();
+                $(this).css("pointer-events","none");
+            } else {
+                $(this).addClass('more-layer');
+            }
+        } else if (window.innerWidth <= 750) {
+            // 750px 이하 화면일 때
+            if(rvTxtInVw < 32){
+                $(this).find('.more').hide();
+                $(this).css("pointer-events","none");
+            } else {
+                $(this).addClass('more-layer');
+            }
         }
+
+        console.log('Height in px:', rvTxt, 'Height in vw:', rvTxtInVw);
     })
 };
 
