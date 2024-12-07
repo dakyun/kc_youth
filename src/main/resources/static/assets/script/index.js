@@ -291,16 +291,20 @@ $('#comment').keyup(function (e) {
 $(window).on('resize', function() {
     if ($(window).width() <= 750) {
         $('ul .post-item .inner').each(function(index, item) {
-            var rvTxt = $(this).find('.real').height();
+            var rvTxt = $(this).find('.contain').height();
             var winVw = $(window).width();
             var valPer = winVw / 100;
             var value = rvTxt / valPer;
-            console.log(rvTxt,winVw,valPer,value);
-            if(value < 36){
-                $(this).find('.more').hide();
-                $(this).css("pointer-events","none");
+            if ($(this).hasClass("ht-content")) {
+                if (value < 10) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
             } else {
-                $(this).addClass('more-layer');
+                if (value < 15) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
             }
         });
     }
@@ -310,76 +314,57 @@ $(window).on('resize', function() {
 $(document).ready(function() {
     if ($(window).width() <= 750) {
         $('ul .post-item .inner').each(function(index, item) {
-            var rvTxt = $(this).find('.real').height();
+            var rvTxt = $(this).find('.contain').height();
             var winVw = $(window).width();
             var valPer = winVw / 100;
             var value = rvTxt / valPer;
-            console.log(rvTxt,winVw,valPer,value);
-            if(value < 36){
-                $(this).find('.more').hide();
-                $(this).css("pointer-events","none");
+            if ($(this).hasClass("ht-content")) {
+                if (value < 10) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
             } else {
-                $(this).addClass('more-layer');
+                if (value < 15) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
             }
         });
     }
 });
 
-function calHeight(){
-    if ($(window).width() >= 1200) {
-        $('ul .post-item .inner').each(function(){
-            var rvTxt = $(this).find('.contain').height();
+// '더보기' 누를 시 모달 창 팝업하는 함수
+function calHeight() {
+    $('ul .post-item .inner').each(function(){
+        var rvTxt = $(this).find('.contain').height();
+        var rvTxt2 = $(this).find('.real').height();
+        var rvTxtInVw = rvTxt2 / 7.5; // rvTxt를 vw 값으로 환산
+
+        if (window.innerWidth >= 1200) {
+            // 1200px 이상 화면일 때
             if(rvTxt < 144){
                 $(this).find('.more').hide();
                 $(this).css("pointer-events","none");
             } else {
                 $(this).addClass('more-layer');
             }
-        });
-    }
-}
+        } else if (window.innerWidth <= 750) {
+            // 750px 이하 화면일 때
+            if(rvTxtInVw < 16){
+                $(this).find('.more').hide();
+                $(this).css("pointer-events","none");
+            } else {
+                $(this).addClass('more-layer');
+            }
+        }
 
-// 화면 크기가 변경될 때도 함수를 실행하도록 추가
-$(window).resize(function() {
-    calHeight();
-});
-
-// 페이지 로드 시 함수를 실행
-$(document).ready(function() {
-    calHeight();
-});
-
-// '더보기' 누를 시 모달 창 팝업하는 함수
-// function calHeight() {
-//     $('ul .post-item .inner').each(function(){
-//         var rvTxt = $(this).find('.contain').height();
-//         var rvTxt2 = $(this).find('.contain').height();
-//         var rvTxtInVw = rvTxt2 / 7.5; // rvTxt를 vw 값으로 환산
-//
-//         if (window.innerWidth >= 1200) {
-//             // 1200px 이상 화면일 때
-//             if(rvTxt < 144){
-//                 $(this).find('.more').hide();
-//                 $(this).css("pointer-events","none");
-//             } else {
-//                 $(this).addClass('more-layer');
-//             }
-//         } else if (window.innerWidth <= 750) {
-//             // 750px 이하 화면일 때
-//             if(rvTxtInVw < 32){
-//                 $(this).find('.more').hide();
-//                 $(this).css("pointer-events","none");
-//             } else {
-//                 $(this).addClass('more-layer');
-//             }
-//         }
-//
-//         console.log('Height in px:', rvTxt, 'Height in vw:', rvTxtInVw);
-//     })
-// };
+        console.log('Height in px:', rvTxt, 'Height in vw:', rvTxtInVw);
+    })
+};
 
 // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
 $(document).ready(function() {
+    calHeight();
 
     // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
     $("body").on('click', '.more-layer', function(e) {
