@@ -1209,6 +1209,7 @@
 }
 @include mq("small-screen-3"){
     .news{
+        overflow: hidden;
         .card-swiper{
             width:px(540);
             margin:0 auto;
@@ -1265,10 +1266,13 @@
 }
 .swiper-3d .swiper-slide-shadow{
     background:#ddd;
-    -webkit-box-shadow: 8px 10px 20px -1px rgba(0,0,0,0.3);
-    -moz-box-shadow: 8px 10px 20px -1px rgba(0,0,0,0.3);
     box-shadow: 8px 10px 20px -1px rgba(0,0,0,0.15);
     border-radius:20px;
+    @include mq("small-screen-3"){
+        background:#ddd;
+        box-shadow: px(8) px(10) px(20) px(-1) rgba(0,0,0,0.15);
+        border-radius:px(20);
+    }
 }
 #section3{
     .gift{
@@ -1884,6 +1888,7 @@
                             }
                             .w100{
                                 width:70%;
+                                border-radius:0;
                             }
                             input::placeholder{
                                 font-size:0;
@@ -1943,49 +1948,90 @@
 //         background:transparent !important;
 //     }
 // }
-.mimo {
-    position: relative; background: #ff6b1d; padding-top: 15.625vw; z-index: 20;
-    overflow:hidden;
-    .title-box{
-        position:absolute;
-        top:0;
-        left:50%;
-        transform:translateX(-50%);
-    }
-    #mimoCanvas { width: 100%; height: 160vh; margin: -30vh 0;overflow:hidden;
-        @include mq("small-screen-3") {
-            &{
-              width:80%;
-              height:100vh; 
-            }
-          }}
-    #mimoCanvas canvas{ width: 100%; height: 100%;}
-    .mimo-btn{
-        width:320px;
-        height:60px;
-        border:1px solid #fff;
-        display:flex;
-        justify-content:center;
-        border-radius:80px;
-        line-height:60px;
-        background:#ff6c1d94;
-        margin:30px auto -15px;
-        @include mq("small-screen-3") {
-            &{
-                width:px(320);
-                height:px(60);  
-            }
-          }
-        span{
-            font-size:24px;
-            display:flex;
-            align-items:center;
-            column-gap:10px;
-            font-weight:300;
+@include mq("small-screen-1") {
+    .mimo {
+        position: relative; background: #ff6b1d; padding-top: 15.625vw; z-index: 20;
+        overflow:hidden;
+        .title-box{
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
         }
-        i{
-            font-size:36px;
-            display:inline-block;
+        #mimoCanvas { width: 100%; height: 160vh; margin: -30vh 0;overflow:hidden;
+        }
+        #mimoCanvas canvas{ width: 100%; height: 100%;}
+        .mimo-btn{
+            width:320px;
+            height:60px;
+            border:1px solid #fff;
+            display:flex;
+            justify-content:center;
+            border-radius:80px;
+            line-height:60px;
+            background:#ff6c1d94;
+            margin:30px auto -15px;
+            span{
+                font-size:24px;
+                display:flex;
+                align-items:center;
+                column-gap:10px;
+                font-weight:300;
+            }
+            i{
+                font-size:36px;
+                display:inline-block;
+            }
+        }
+    }
+}
+@include mq("small-screen-3") {
+    .mimo {
+        position: relative;
+        background: #ff6b1d;
+        padding-top: 15.625vw;
+        z-index: 20;
+        overflow:hidden;
+        height:62vh;
+        .title-box{
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            .sub{
+                font-size:4.2666666667vw;
+            }
+            strong{
+                font-size: 8vw;
+            }
+        }
+        #mimoCanvas {
+            width: 75%;
+            height: 36vh;
+            margin: 15vh auto 0;
+            overflow:hidden;}
+        #mimoCanvas canvas{ width: 100%; height: 100%;}
+        .mimo-btn{
+            border:1px solid #fff;
+            display:flex;
+            justify-content:center;
+            border-radius:80px;
+            background:#ff6c1d94;
+            width:px(520);
+            height:px(80);
+            line-height: px(80);
+            margin:px(50) auto px(-25);
+            span{
+                font-size:px(28);
+                display:flex;
+                align-items:center;
+                column-gap:px(20);
+                font-weight:300;
+            }
+            i{
+                font-size:px(36);
+                display:inline-block;
+            }
         }
     }
 }

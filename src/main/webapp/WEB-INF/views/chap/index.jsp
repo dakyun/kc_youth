@@ -528,11 +528,11 @@
     <div class="container">
         <div class="footer-box">
             <div class="sns-box">
-                <h3>당신 근처의 좋은 교회, 맑은샘광천교회 청년부!</h3>
-                <p>예배장소 | 맑은샘광천교회 2층 그레이스홀, 상월곡역 3번 출구<br>주일예배 | 주일 오후 2시<br></p>
+                <h3>당신 근처의 좋은 교회,<br>맑은샘광천교회 청년부!</h3>
+                <p>예배장소 | 맑은샘광천교회 2층 그레이스홀,<br class="nd"><span></span>상월곡역 3번 출구<br>주일예배 | 주일 오후 2시<br></p>
             </div>
             <div id="copyright">
-                <p>해당 페이지는 2025년 1월 31일까지 운영되며 <br />이벤트 참여 시 제공받은 정보들은 페이지 종료와 함께 소멸될 예정입니다.<br><br>© 2024 맑은샘광천교회 청년부 디자인팀</p>
+                <p>해당 페이지는 2025년 1월 31일까지 운영되며 <br />이벤트 참여 시 제공받은 정보들은 페이지 종료와 함께<br class="nd">소멸될 예정입니다.<br><br>© 2024 맑은샘광천교회 청년부 디자인팀</p>
             </div>
         </div>
     </div>
@@ -614,9 +614,6 @@
     const globalForceDistance = 200;
     const globalForceMagnitude = 0.01;
 
-
-
-
     const renderBox = document.getElementById('mimoCanvas');
 
     const render = Render.create({
@@ -639,7 +636,8 @@
     const characters = [];
 
     function getRandomPosition(maxWidth, maxHeight) {
-        const x = Math.random() * maxWidth;
+        const spacingMultiplier = maxWidth <= 750 ? 1.5 : 10; // 750px 이하일 때 간격을 넓힘
+        const x = Math.random() * maxWidth * spacingMultiplier;
         const y = Math.random() * (maxHeight * 0.3) - 300;
         return { x, y };
     }
@@ -693,8 +691,6 @@
             const deltaY = character.position.y - mousePosition.y;
             const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-
-
             if (distance < globalForceDistance) {
                 const forceMagnitude = globalForceMagnitude * (globalForceDistance - distance)
                 const force = {
@@ -746,10 +742,17 @@
         World.remove(world, characters);
         characters.length = 0;
 
-
         const ratio = renderBox.offsetWidth / 1000;
+        const frictionAir = renderBox.offsetWidth <= 750 ? 1.2 : globalCharacterFrictionAir;
+        const angularDamping = renderBox.offsetWidth <= 750 ? 1.2 : globalCharacterAngularDamping;
+        const scaleMultiplier = renderBox.offsetWidth <= 750 ? 2 : 1;
+
         charactersData.forEach(characterData => {
             const character = createCharacter(characterData, ratio);
+            character.frictionAir = frictionAir;
+            character.angularDamping = angularDamping;
+            character.render.sprite.xScale *= scaleMultiplier;
+            character.render.sprite.yScale *= scaleMultiplier;
             characters.push(character);
             World.add(world, character);
         });
