@@ -37,6 +37,7 @@ a{text-decoration:none;color:#222}
         padding-right:17.8947vw;
         @include mq('small-screen-3'){
             padding-right:unset;
+            padding:0 px(30);
         }
     }
     @include mq('small-screen-3'){
