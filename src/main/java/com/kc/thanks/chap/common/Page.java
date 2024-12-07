@@ -40,4 +40,10 @@ public class Page {
         return (pageNo - 1) * amount;
     }
 
+    public void setPageAmount(boolean isMobile) {
+        if(isMobile) {
+            this.amount = 8;
+        }
+    }
+
 }
