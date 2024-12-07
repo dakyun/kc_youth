@@ -78,7 +78,7 @@
             <li class="on"><a href="#section1"><i class="n1"></i><span class="name">Intro</span></a></li>
             <li><a href="#discography"><i class="n5"></i><span class="name">Youtubes</span></a></li>
             <li><a href="#section3"><i class="n3"></i><span class="name">Event</span></a></li>
-            <li><a href="#posting"><i class="n4"></i><span class="name">Posting</span></a></li>
+            <li><a href="#posting"><i class="n4"></i><span class="name">Thank You Note</span></a></li>
             <li><a href="#section2"><i class="n2"></i><span class="name">Card News</span></a></li>
         </ul>
     </div>
@@ -99,7 +99,7 @@
                 <a href="#section3" class="nav-link bold"><span>03</span>Event</a>
             </li>
             <li class="nav-item">
-                <a href="#posting" class="nav-link bold"><span>04</span>Posting</a>
+                <a href="#posting" class="nav-link bold"><span>04</span>Thank You Note</a>
             </li>
             <li class="nav-item">
                 <a href="#section2" class="nav-link bold"><span>05</span>Card News</a>
@@ -255,9 +255,9 @@
         <div class="title-box center">
             <div class="center">
                 <span class="sub show-up">2024 연말결산 이벤트</span>
-                <strong class="show-up delay">Share<br>Your Message!</strong>
+                <strong class="show-up delay">Share <br>Your Message!</strong>
             </div>
-            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br><br>
+            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br class="nd"><br>
                 12월 29일(주) 인스타그램 라이브 추첨을 통해<br class="nd">2025 말씀노트를 선물로 드려요!
                 <span class="mini">* 자세한 참여방법 및 유의사항은 하단 '꼭! 확인하세요!'를 참고하세요</span>
             </p>
@@ -455,15 +455,15 @@
     <section id="section2" class="news wrapper bg-wt qmenu section">
         <div class="title-box">
             <div class="left">
-                <span class="sub show-up">두근두근 1분기 카드뉴스 준비중!</span>
-                <strong class="show-up delay">Card News of 1Q</strong>
+                <span class="sub show-up">두근두근 2024 총결산 카드뉴스 준비중!</span>
+                <strong class="show-up delay">Recap Card News</strong>
             </div>
             <a target="_blank" href="https://www.instagram.com/kwangchun_youth/" class="org-btn show-up delay"><span>청년부 인스타그램 바로가기</span></a>
         </div>
         <div class="card-swiper show-up delay-more">
             <div class="swiper-wrapper">
                 <div class="swiper-slide coming">
-                    <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>1분기 사역 카드뉴스가 다음주 주일(12/15)에 공개됩니다!</span></div>
+                    <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>2024 사역 카드뉴스가 다음주(12/15)부터<br>순차적으로 공개됩니다!</span></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="/assets/images/1q_card02.jpg" alt="">

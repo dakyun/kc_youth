@@ -1989,6 +1989,7 @@ header #top-menu {
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-size: 28px;
   }
   #section4 h2::before {
     content: "";
@@ -2638,6 +2639,7 @@ header #top-menu {
     height: 36vh;
     margin: 15vh auto 0;
     overflow: hidden;
+    display: none;
   }
   .mimo #mimoCanvas canvas {
     width: 100%;
