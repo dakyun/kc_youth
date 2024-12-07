@@ -115,3 +115,10 @@ function setDisplay2(){
         $('.etc.n2').hide();
     }
 }
+function setDisplay3(){
+    if($('input:radio[id=pad]').is(':checked')){
+        $('.etc.n3').show();
+    }else{
+        $('.etc.n3').hide();
+    }
+}
