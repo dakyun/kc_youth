@@ -364,6 +364,13 @@ function calHeight() {
 
 // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
 $(document).ready(function() {
+    $('#resigter').on('click', function(event) {
+        if ($(window).width() >= 1200) {
+            event.preventDefault(); // 기본 동작을 막음
+            alert('모바일로 주문 부탁 드립니다!');
+            $(this).attr('href', '#'); // href 속성을 '#'으로 변경
+        }
+    });
     calHeight();
 
     // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시

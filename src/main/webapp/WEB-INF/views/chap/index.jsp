@@ -199,52 +199,52 @@
         <div class="container show-up delay-more ytSwiper">
             <ul id="discography-albums" class="swiper-wrapper">
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/hr64qwRgM84?si=fewY_hS4Pu3-mY8z"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/hr64qwRgM84?si=fewY_hS4Pu3-mY8z"><img src="/assets/images/yt01.webp" alt=""></a>
                     <h3 class="bold">청년 1-2부 여름 연합수련회 리뷰</h3>
                     <span>08.15 - 17</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/sz5cNEL8N7k?si=tqEg4ribvpDKXtnE"><img src="/assets/images/yt03.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/sz5cNEL8N7k?si=tqEg4ribvpDKXtnE"><img src="/assets/images/yt02.webp" alt=""></a>
                     <h3 class="bold">전도축제 청년부 워십</h3>
                     <span>11.04</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/s0ZZ3-bGerg?si=5wR3ge4uzPq4CF_6"><img src="/assets/images/yt02.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/s0ZZ3-bGerg?si=5wR3ge4uzPq4CF_6"><img src="/assets/images/yt03.webp" alt=""></a>
                     <h3 class="bold">새가족 홈커밍데이 홍보영상</h3>
                     <span>06.30</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/LIR4djOWjac?si=Iq_6-YFlxBEXwQ_C"><img src="/assets/images/yt01.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/LIR4djOWjac?si=Iq_6-YFlxBEXwQ_C"><img src="/assets/images/yt04.webp" alt=""></a>
                     <h3 class="bold">맑은샘광천교회 청년부 체육대회</h3>
                     <span>04.21(2청) - 04.28(1청)</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/AxJxAJ_5_ho?si=a00DSGzvRHOYhX8R"><img src="/assets/images/yt01.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/AxJxAJ_5_ho?si=a00DSGzvRHOYhX8R"><img src="/assets/images/yt05.webp" alt=""></a>
                     <h3 class="bold">청년부 1&2 하반기 바베큐파티</h3>
                     <span>10.06(1청) - 10.13(2청)</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://www.youtube.com/watch?v=iewmfkwgYyo"><img src="/assets/images/yt02.jpg" alt=""></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=iewmfkwgYyo"><img src="/assets/images/yt06.webp" alt=""></a>
                     <h3 class="bold">1학기 찬양예배 리뷰</h3>
                     <span>05.12</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt03.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt07.webp" alt=""></a>
                     <h3 class="bold">인도네시아 단기선교 보고영상</h3>
                     <span>07.14 - 25</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt08.webp" alt=""></a>
                     <h3 class="bold">태국 단기선교 보고영상</h3>
                     <span>07.22 - 30</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt09.webp" alt=""></a>
                     <h3 class="bold">1청 겨울수련회 리뷰</h3>
                     <span>02.29 - 03.02</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt10.webp" alt=""></a>
                     <h3 class="bold">2청 겨울수련회 리뷰</h3>
                     <span>01.18 - 20</span>
                 </li>
@@ -258,7 +258,7 @@
                 <strong class="show-up delay">Share <br>Your Message!</strong>
             </div>
             <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br class="nd"><br>
-                12월 29일(주) 인스타그램 라이브 추첨을 통해<br class="nd">2025 말씀노트를 선물로 드려요!
+                12월 29일(주) 인스타그램 라이브 추첨을 통해 <br class="nd">2025 말씀노트를 선물로 드려요!
                 <span class="mini">* 자세한 참여방법 및 유의사항은 하단 '꼭! 확인하세요!'를 참고하세요</span>
             </p>
         </div>
@@ -518,8 +518,8 @@
                 <span class="sub">맑은샘광천교회 청년부에 대해 더 알고 싶으시다면?</span>
                 <strong>Follow Our SNS!</strong>
             </div>
-            <a href="" class="mimo-btn show-up delay"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
-            <a href="" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
+            <a href="https://www.instagram.com/kwangchun_youth/" class="mimo-btn show-up delay"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
+            <a href="https://www.youtube.com/@%EB%A7%91%EC%9D%80%EC%83%98%EA%B4%91%EC%B2%9C%EA%B5%90%ED%9A%8C%EC%B2%AD%EB%85%84%EB%B6%80" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
         </div>
         <div id="mimoCanvas"></div>
         <div class="mo-mimo">

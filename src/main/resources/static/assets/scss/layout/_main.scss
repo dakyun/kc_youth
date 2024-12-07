@@ -216,11 +216,6 @@
     #discography-albums {
         width: 100%;
         height: 100%;
-        & li:last-child {
-            opacity: 0;
-            cursor:default;
-        }
-
         & .album-info {
             width: 25vw !important;
             a {
@@ -2185,7 +2180,7 @@
             display: flex;
             max-width: 400px;
             margin: 30px auto 0;
-            justify-content: space-between;
+            justify-content:center;
             width: auto;
             li{
                 a{
@@ -2230,7 +2225,7 @@
             display: flex;
             max-width: px(480);
             margin: px(60) auto 0;
-            justify-content: space-between;
+            justify-content: center;
             width: auto;
             li{
                 a{

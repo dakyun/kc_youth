@@ -13,6 +13,8 @@
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
+<body>
+<div class="allwrap">
 <header>
     <img src="/assets/images/note_01.jpg">
 </header>
@@ -112,6 +114,7 @@
 <footer class="section">
      <a href="http://pf.kakao.com/_xcBxouM"><img src="/assets/images/note_03.jpg"></a>
 </footer>
+</div>
 <script>
     /* contact copy 버튼 */
     document.execCommand("copy");

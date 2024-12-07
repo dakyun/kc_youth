@@ -765,10 +765,6 @@ header #top-menu {
     width: 100%;
     height: 100%;
   }
-  #discography-albums li:last-child {
-    opacity: 0;
-    cursor: default;
-  }
   #discography-albums .album-info {
     width: 25vw !important;
   }
@@ -2771,7 +2767,7 @@ header #top-menu {
     display: flex;
     max-width: 400px;
     margin: 30px auto 0;
-    justify-content: space-between;
+    justify-content: center;
     width: auto;
   }
   .pager ul li a {
@@ -2806,7 +2802,7 @@ header #top-menu {
     display: flex;
     max-width: 64vw;
     margin: 8vw auto 0;
-    justify-content: space-between;
+    justify-content: center;
     width: auto;
   }
   .pager ul li a {
