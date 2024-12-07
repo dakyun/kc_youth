@@ -2312,11 +2312,6 @@ header #top-menu {
     word-break: break-all;
     cursor: pointer;
   }
-  #section4 #post-area .post .post-item p .inner::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
   #section4 #post-area .post .post-item p .inner .contain {
     color: #333;
     display: -webkit-box;
@@ -2331,22 +2326,11 @@ header #top-menu {
   #section4 #post-area .post .post-item p .inner .contain .real {
     color: #333;
   }
-  #section4 #post-area .post .post-item p .inner .contain .real::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  #section4 #post-area .post .post-item p .inner .contain::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
   #section4 #post-area .post .post-item p .more {
     float: right;
     margin-top: 25.6vw;
     height: 2.6666666667vw;
     color: #ccc;
-    shape-outside: border-box;
   }
   #section4 #post-area .post .post-item .bottom-area {
     position: absolute;

@@ -1730,11 +1730,6 @@
                             height: px(238);
                             word-break: break-all;
                             cursor: pointer;
-                            &::after{
-                                content: "";
-                                display: block;
-                                clear: both;
-                            }
                             .contain{
                                 color:#333;
                                 display: -webkit-box;
@@ -1747,16 +1742,6 @@
                                 font-size:px(26);
                                 .real{
                                     color:#333;
-                                    &::after{
-                                        content: "";
-                                        display: block;
-                                        clear: both;
-                                    }
-                                }
-                                &::after{
-                                    content: "";
-                                    display: block;
-                                    clear: both;
                                 }
                             }
                         }
@@ -1765,7 +1750,7 @@
                             margin-top: px(192);
                             height: px(20);
                             color: #ccc;
-                            shape-outside: border-box;
+                            //shape-outside: border-box;
                         }
                     }
                     .bottom-area {
