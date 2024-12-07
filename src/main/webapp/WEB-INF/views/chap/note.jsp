@@ -75,7 +75,7 @@
                     <input id="addr" class="input-style yet" type="text" name="receive" placeholder="배송 받으실 주소를 정확히 입력하세요">
                 </div>
                 <label class="flex last">
-                    <input type="radio" onchange="setDisplay2();setDisplay3();" id="pad" name="receive" value="D" />
+                    <input type="radio" onchange="setDisplay2();setDisplay3();" id="pad" name="receive" value="I" />
                     <span class="word"><strong>아이패드 파일</strong></span>
                 </label>
                 <span class="mini">파일로 받기를 원하시면 체크 후 이메일을 입력해주세요.<br>*디지털 말씀노트(12/15부터 순차 발송)</span>

@@ -37,7 +37,12 @@ function applyNote() {
     const contact = document.getElementById("contact").value.trim();
     let cnt = document.querySelector("input[name='quantity']:checked").value;
     const type = document.querySelector("input[name='receive']:checked").value;
-    const addr = type === "D" ? document.getElementById("addr").value.trim() : "";
+    let addr = "";
+    if(type === "D") {
+        addr = document.getElementById("addr").value.trim();
+    } else if(type === "I") {
+        addr = document.getElementById("email").value.trim();
+    }
 
     if (cnt === "etc") {
         cnt = parseInt(document.getElementById("quantity_etc_input").value.trim(), 10);
@@ -50,7 +55,7 @@ function applyNote() {
     }
 
     // 필수 값 체크
-    if (!name || !contact || cnt <= 0 || !type || (type === "D" && !addr)) {
+    if (!name || !contact || cnt <= 0 || !type || (type === "D" && !addr) || (type === "I" && !addr)) {
         alert("모든 필수 입력값을 확인하세요.");
         return;
     }
@@ -97,8 +102,10 @@ function resetForm() {
     document.querySelector("input[name='receive'][value='C']").checked = true;
     document.getElementById("quantity_etc_input").value = "";
     document.getElementById("addr").value = "";
+    document.getElementById("email").value = "";
     document.querySelector(".etc.n1").style.display = "none";
     document.querySelector(".etc.n2").style.display = "none";
+    document.querySelector(".etc.n3").style.display = "none";
 }
 
 function setDisplay(){
