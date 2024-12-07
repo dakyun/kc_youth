@@ -14,13 +14,17 @@ const NoteWriteRequestDTO = {
 function initEvents() {
     // 기타 입력란 표시/숨기기 이벤트
     document.querySelector("input#q_etc").addEventListener("change", function () {
-        document.querySelector(".etc.n1").style.display = this.checked ? "block" : "none";
+        // document.querySelector(".etc.n1").style.display = this.checked ? "block" : "none";
+        setDisplay();
     });
+
 
     // 택배 주소 입력란 표시/숨기기 이벤트
     document.querySelector("input#parcel").addEventListener("change", function () {
-        document.querySelector(".etc.n2").style.display = this.checked ? "block" : "none";
+        // document.querySelector(".etc.n2").style.display = this.checked ? "block" : "none";
+        setDisplay2();
     });
+
 
     // 신청하기 버튼 클릭 이벤트
     document.getElementById("noteApply").addEventListener("click", function () {
@@ -95,4 +99,19 @@ function resetForm() {
     document.getElementById("addr").value = "";
     document.querySelector(".etc.n1").style.display = "none";
     document.querySelector(".etc.n2").style.display = "none";
+}
+
+function setDisplay(){
+    if($('input:radio[id=q_etc]').is(':checked')){
+        $('.etc.n1').show();
+    }else{
+        $('.etc.n1').hide();
+    }
+}
+function setDisplay2(){
+    if($('input:radio[id=parcel]').is(':checked')){
+        $('.etc.n2').show();
+    }else{
+        $('.etc.n2').hide();
+    }
 }
