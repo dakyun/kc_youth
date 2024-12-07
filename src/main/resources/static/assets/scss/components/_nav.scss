@@ -67,6 +67,7 @@
     }
     &-check:checked~&-button &-icon{
         background-color:transparent;
+        box-shadow: unset;
     }
     &-check:checked~&-button &-icon::before{
         top:0;

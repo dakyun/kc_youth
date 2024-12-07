@@ -68,7 +68,7 @@
     </div>
     <div class="container">
         <div id="header-text" class="bold">
-            <h3 id="header-text-sub1">MALGEUNSAEM<br>KWANGCHUN CHURCH</h3>
+            <h3 id="header-text-sub1">MALGEUNSAEM<br>KWANGCHUN CHURCH &#8224;</h3>
             <h3 id="header-text-sub2">ADIEU!<br>THE MEMORY OF 2024</h3>
         </div>
     </div>
@@ -143,7 +143,7 @@
             다가오는 새해에도 하나님께서 예비하신 더 큰 은혜와 계획을 기대하며 믿음의 발걸음을 함께 내딛기를 소망합니다.
             서로를 더 깊이 사랑하고 하나님의 뜻을 이루어가는 아름다운 청년부로 성장하길 기대합니다. 사랑하고 축복합니다.
         </p>
-        <p class="show-up delay-more">- 맑은샘광천교회 청년부 디렉터 김기도 목사 -</p>
+        <p class="show-up delay-more2">- 맑은샘광천교회 청년부 디렉터 김기도 목사 -</p>
     </div>
 </div>
 <main>

@@ -209,6 +209,7 @@ a {
 }
 .nav-check:checked ~ .nav-button .nav-icon {
   background-color: transparent;
+  box-shadow: unset;
 }
 .nav-check:checked ~ .nav-button .nav-icon::before {
   top: 0;
