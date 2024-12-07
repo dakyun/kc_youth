@@ -1740,17 +1740,36 @@
                                 height:auto;
                                 padding:0 px(10);
                                 font-size:px(26);
+                                position:relative;
                                 .real{
                                     color:#333;
                                 }
                             }
                         }
                         .more {
-                            //float: right;
-                            //margin-top: px(192);
+                            position: absolute;
+                            right: px(14);
+                            bottom: px(14);
+                            padding: 0;
+                            color: #ccc;
+                            font-size:px(26);
                             height: px(20);
                             color: #ccc;
-                            //shape-outside: border-box;
+                            background: #f6fbf4;
+                            text-indent:-99999px;
+                            &::after {
+                                content: "더보기";
+                                position: absolute;
+                                display: block;
+                                right: 0;
+                                top: -0.5555555556vw;
+                                background: transparent linear-gradient(90deg, rgba(248, 248, 248, 0.3137254902) 0%, #fff 60%) 0% 0% no-repeat padding-box;
+                                width:px(200);
+                                height: 5vw;
+                                color: #ccc;
+                                font-size:px(26);
+                                text-align: right;
+                            }
                         }
                     }
                     .bottom-area {

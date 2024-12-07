@@ -2322,13 +2322,35 @@ header #top-menu {
     height: auto;
     padding: 0 1.3333333333vw;
     font-size: 3.4666666667vw;
+    position: relative;
   }
   #section4 #post-area .post .post-item p .inner .contain .real {
     color: #333;
   }
   #section4 #post-area .post .post-item p .more {
+    position: absolute;
+    right: 1.8666666667vw;
+    bottom: 1.8666666667vw;
+    padding: 0;
+    color: #ccc;
+    font-size: 3.4666666667vw;
     height: 2.6666666667vw;
     color: #ccc;
+    background: #f6fbf4;
+    text-indent: -99999px;
+  }
+  #section4 #post-area .post .post-item p .more::after {
+    content: "더보기";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -0.5555555556vw;
+    background: transparent linear-gradient(90deg, rgba(248, 248, 248, 0.3137254902) 0%, #fff 60%) 0% 0% no-repeat padding-box;
+    width: 26.6666666667vw;
+    height: 5vw;
+    color: #ccc;
+    font-size: 3.4666666667vw;
+    text-align: right;
   }
   #section4 #post-area .post .post-item .bottom-area {
     position: absolute;
