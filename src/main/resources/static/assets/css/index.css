@@ -736,6 +736,7 @@ header #top-menu {
 @media screen and (max-width: 750px) {
   #discography {
     padding-bottom: 16vw;
+    overflow: hidden;
   }
 }
 
