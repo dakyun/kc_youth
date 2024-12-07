@@ -2632,21 +2632,17 @@ header #top-menu {
     font-size: 36px;
     display: inline-block;
   }
+  .textcontainer {
+    display: none;
+  }
 }
 @media screen and (max-width: 750px) {
   .mimo {
     position: relative;
     background: #ff6b1d;
-    padding-top: 15.625vw;
     z-index: 20;
     overflow: hidden;
-    height: 62vh;
-  }
-  .mimo .title-box {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 100%;
   }
   .mimo .title-box .sub {
     font-size: 4.2666666667vw;
@@ -2655,15 +2651,7 @@ header #top-menu {
     font-size: 8vw;
   }
   .mimo #mimoCanvas {
-    width: 75%;
-    height: 36vh;
-    margin: 15vh auto 0;
-    overflow: hidden;
     display: none;
-  }
-  .mimo #mimoCanvas canvas {
-    width: 100%;
-    height: 100%;
   }
   .mimo .mimo-btn {
     border: 1px solid #fff;
@@ -2687,6 +2675,95 @@ header #top-menu {
   .mimo .mimo-btn i {
     font-size: 4.8vw;
     display: inline-block;
+  }
+  .mimo .mo-mimo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 46.6666666667vw;
+    margin: 4vw auto;
+    position: relative;
+  }
+  .mimo .mo-mimo .item {
+    width: 40vw;
+    height: 40vw;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    animation: totak 1s infinite steps(1);
+  }
+  .mimo .mo-mimo .item.n1 {
+    background-image: url(../images/mimo04.png);
+    top: 0;
+    left: -4vw;
+  }
+  .mimo .mo-mimo .item.n2 {
+    background-image: url(../images/mimo02.png);
+    top: 0;
+    right: -4vw;
+    animation-delay: 0.5s;
+  }
+  .mimo .mo-mimo .item.n3 {
+    background-image: url(../images/mimo06.png);
+    top: 6.6666666667vw;
+    left: 16vw;
+    z-index: 2;
+  }
+  .mimo .mo-mimo .item.n4 {
+    background-image: url(../images/mimo08.png);
+    top: 6.6666666667vw;
+    right: 16vw;
+    animation-delay: 0.5s;
+  }
+  .textcontainer {
+    position: absolute;
+    top: 74.6666666667vw;
+  }
+  .particletext {
+    text-align: center;
+    font-size: 16vw;
+    position: relative;
+    width: 100%;
+    display: block;
+    color: transparent;
+  }
+  .particletext.hearts > .particle {
+    opacity: 0;
+    position: absolute;
+    background-color: rgb(204, 42, 93);
+    animation: hearts 3s ease-in infinite;
+  }
+  .particletext.hearts > .particle:before, .particletext.hearts > .particle:after {
+    position: absolute;
+    content: "";
+    border-radius: 100px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(204, 42, 93);
+  }
+  .particletext.hearts > .particle:before {
+    transform: translateX(-50%);
+  }
+  .particletext.hearts > .particle:after {
+    transform: translateY(-50%);
+  }
+}
+@keyframes hearts {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0%) rotate(45deg);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translate(0, -20%) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%) rotate(45deg);
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1920px) {

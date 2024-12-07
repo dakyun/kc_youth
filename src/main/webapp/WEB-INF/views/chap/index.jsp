@@ -522,6 +522,15 @@
             <a href="" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
         </div>
         <div id="mimoCanvas"></div>
+        <div class="mo-mimo">
+            <span class="item n1"></span>
+            <span class="item n2"></span>
+            <span class="item n3"></span>
+            <span class="item n4"></span>
+        </div>
+        <div class="textcontainer">
+            <span class="particletext hearts">Hearts</span>
+        </div>
     </section>
 </main>
 <footer>

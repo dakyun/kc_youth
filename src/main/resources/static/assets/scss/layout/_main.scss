@@ -2044,20 +2044,18 @@
             }
         }
     }
+    .textcontainer{
+        display:none;
+    }
 }
 @include mq("small-screen-3") {
     .mimo {
         position: relative;
         background: #ff6b1d;
-        padding-top: 15.625vw;
         z-index: 20;
         overflow:hidden;
-        height:62vh;
+        height:100%;
         .title-box{
-            position:absolute;
-            top:0;
-            left:50%;
-            transform:translateX(-50%);
             .sub{
                 font-size:4.2666666667vw;
             }
@@ -2065,13 +2063,7 @@
                 font-size: 8vw;
             }
         }
-        #mimoCanvas {
-            width: 75%;
-            height: 36vh;
-            margin: 15vh auto 0;
-            overflow:hidden;
-        display: none;}
-        #mimoCanvas canvas{ width: 100%; height: 100%;}
+        #mimoCanvas {display: none;}
         .mimo-btn{
             border:1px solid #fff;
             display:flex;
@@ -2094,8 +2086,99 @@
                 display:inline-block;
             }
         }
+        .mo-mimo{
+            display:flex;
+            flex-wrap: wrap;
+            width:100%;
+            height:px(350);
+            margin:px(30) auto;
+            position:relative;
+            .item{
+                width:px(300);
+                height:px(300);
+                display:block;
+                background-position:center center;
+                background-repeat: no-repeat;
+                background-size:100%;
+                position:absolute;
+                animation:totak 1s infinite steps(1);
+                &.n1{
+                    background-image: url(../images/mimo04.png);
+                    top:0;
+                    left:px(-30);
+                }
+                &.n2{
+                    background-image: url(../images/mimo02.png);
+                    top:0;
+                    right:px(-30);
+                    animation-delay:.5s;
+                }
+                &.n3{
+                    background-image: url(../images/mimo06.png);
+                    top:px(50);
+                    left:px(120);
+                    z-index:2;
+                }
+                &.n4{
+                    background-image: url(../images/mimo08.png);
+                    top:px(50);
+                    right:px(120);
+                    animation-delay:.5s;
+                }
+            }
+        }
     }
+    .textcontainer{
+        position:absolute;
+        top:px(560);
+    }
+    .particletext {
+        text-align:center;
+        font-size:px(120);
+        position: relative;
+        width:100%;
+        display:block;
+        color:transparent;
+        &.hearts {
+           >.particle {
+              opacity:0;
+              position: absolute;
+              background-color:rgba(204,42,93,1);
+              animation: hearts 3s ease-in infinite;
+              &:before, &:after {
+                 position: absolute;
+                 content: '';
+                 border-radius:100px;
+                 top:0px;
+                 left:0px;
+                 width:100%;
+                 height:100%;
+                 background-color:rgba(204,42,93,1);
+              }
+              &:before {
+                 transform:translateX(-50%);
+              }
+              &:after {
+                 transform:translateY(-50%);
+              }
+           }
+        }
+     }
 }
+@keyframes hearts {
+    0% {
+       opacity: 0;
+       transform:translate(0, 0%) rotate(45deg);
+    }
+    20% { //show and hint at moving
+       opacity: 0.8;
+       transform:translate(0, -20%) rotate(45deg);
+    }
+    100% {
+       opacity: 0;
+       transform:translate(0, -1000%) rotate(45deg); //Big hearts move faster
+    }
+ }
 @include mq("small-screen-1"){
     .pager{
         ul{
