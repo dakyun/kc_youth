@@ -51,8 +51,8 @@
         position:relative;
         &::after{
             content:'';
-            width:px(260);
-            height:px(260);
+            width:px(240);
+            height:px(240);
             background:url(../images/mimo01.png) no-repeat center center /100%;
             display:block;
             position:absolute;
@@ -310,11 +310,12 @@
 }
 .show-up {
     opacity: 0;
-    transition:all .8s;
+    transition:all .5s;
+    animation: fadeout 0.5s forwards;
 }
 .show-up.active {
-    animation: moveUp 1s forwards;
-    transition:all .8s;
+    animation: moveUp 0.5s forwards;
+    transition:all .5s;
 }
 .show-up.active.delay {
     animation-delay: 0.4s;
@@ -782,7 +783,7 @@
         img{
             position:absolute;
             display:block;
-            width:px(660);
+            width:px(680);
             top:0;
         }
         p{
@@ -808,13 +809,13 @@
             p{right:px(50);text-align:right;}
         }
         &.n5{
-            height:px(1000);
+            height:px(1200);
             img{
                 width:0;
                 left:50%;
-                transform: translateX(-50%);
+                transform: translateX(-23%);
                 &.active{
-                    animation:scaleup 1s ease-in-out forwards;
+                    animation:scaleup 3s ease-in-out forwards;
                 }
             }
             p{
@@ -828,10 +829,17 @@
     0%{
         width:0;
         opacity:0;
+        transform: translateX(-23%);
+    }
+    50%{
+        width:260%;
+        opacity:1;
+        transform: translateX(-23%);
     }
     100%{
-        width:220%;
+        width:260%;
         opacity:1;
+        transform: translateX(-74%);
     }
 }
 .horizontal {
@@ -1345,7 +1353,7 @@
             ul{
                 flex-wrap: wrap;
                 justify-content:center;
-                row-gap:px(120);
+                row-gap:px(100);
                 li{
                     width:80%;
                     img{
@@ -1357,11 +1365,11 @@
                         height:px(40);
                         line-height:px(40);
                         font-size:px(24);
-                        margin:0 auto px(30);
+                        margin:0 auto px(20);
                     }
                     p{
-                        font-size:px(36);
-                        margin-top:px(30);
+                        font-size:px(32);
+                        margin-top:px(20);
                     }
                     &:nth-child(1),&:nth-child(2){
                         &::after{
@@ -1642,6 +1650,7 @@
 @include mq("small-screen-3") {
     #section4{
         padding-bottom:px(120);
+        margin-top:px(-2);
         h2{
             font-weight:500;
             display:flex;
@@ -1797,11 +1806,11 @@
                         display:block;
                         text-indent:-9999px;
                         position:absolute;
-                        top:px(22);
+                        top:px(15);
                         right:px(25);
-                        width:px(26);
-                        height:px(28);
-                        background:url(../images/ico_search.png) no-repeat center center /100%;
+                        width:px(36);
+                        height:px(40);
+                        background:url(../images/ico_search.png) no-repeat center center /85%;
                         z-index:10;
                     }
                 }

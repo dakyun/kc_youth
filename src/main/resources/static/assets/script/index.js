@@ -162,7 +162,7 @@ $(document).ready(function () {
 
 const sections = $(".section");
 const speed = 600;
-const speedSmallScreen = 500; // 750px 이하일 때 적용될 속도
+const speedSmallScreen = 600; // 750px 이하일 때 적용될 속도
 let delTargetPostObj = null;
 
 // 스크롤 애니메이션
