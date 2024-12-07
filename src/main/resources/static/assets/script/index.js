@@ -290,32 +290,43 @@ $('#comment').keyup(function (e) {
 
 // '더보기' 누를 시 모달 창 팝업하는 함수
 function calHeight() {
-    $('ul .post-item .inner').each(function(){
+    $('ul .post-item .inner').each(function() {
         var rvTxt = $(this).find('.contain').height();
         var rvTxt2 = $(this).find('.real').height();
         var rvTxtInVw = rvTxt2 / 7.5; // rvTxt를 vw 값으로 환산
 
         if (window.innerWidth >= 1200) {
             // 1200px 이상 화면일 때
-            if(rvTxt < 144){
+            if (rvTxt < 144) {
                 $(this).find('.more').hide();
-                $(this).css("pointer-events","none");
+                this.style.pointerEvents = "none";
             } else {
                 $(this).addClass('more-layer');
             }
         } else if (window.innerWidth <= 750) {
             // 750px 이하 화면일 때
-            if(rvTxtInVw < 32){
+            if (rvTxtInVw < 32) {
                 $(this).find('.more').hide();
-                $(this).css("pointer-events","none");
+                this.style.pointerEvents = "none";
             } else {
                 $(this).addClass('more-layer');
             }
         }
 
         console.log('Height in px:', rvTxt, 'Height in vw:', rvTxtInVw);
-    })
-};
+    });
+}
+
+// 화면 크기 변경 시에도 함수가 호출되도록 이벤트 리스너 추가
+$(window).on('resize', function() {
+    calHeight();
+});
+
+// DOM이 준비된 후에 함수 호출
+$(document).ready(function() {
+    calHeight();
+});
+
 
 // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
 $(document).ready(function() {
