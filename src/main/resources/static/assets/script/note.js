@@ -129,3 +129,12 @@ function setDisplay3(){
         $('.etc.n3').hide();
     }
 }
+
+function execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            var roadAddr = data.roadAddress;
+            document.getElementById("addr").value = roadAddr;
+        }
+    }).open();
+}
