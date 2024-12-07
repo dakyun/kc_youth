@@ -1177,7 +1177,22 @@
                     border-radius:20px;
                 }
                 &.coming{
-                    background:#ff6b1e;
+                    position: relative;
+                    background:rgba(0, 0, 0, 0.9);
+                    overflow:hidden;
+                    &::before{
+                        content:'';
+                        display:block;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background:url(../images/cardnews.jpg) no-repeat center center / 100%;
+                        filter:blur(3px);
+                        opacity:0.5;
+                        z-index:-1;
+                    }
                     .box{
                         display:flex;
                         justify-content: center;
@@ -1234,7 +1249,7 @@
                 }
                 &.coming{
                     position: relative;
-                    background:rgba(0, 0, 0, 0.7);
+                    background:rgba(0, 0, 0, 0.9);
                     overflow:hidden;
                     &::before{
                         content:'';
@@ -1246,7 +1261,7 @@
                         bottom:0;
                         background:url(../images/cardnews.jpg) no-repeat center center / 100%;
                         filter:blur(3px);
-                        opacity:0.25;
+                        opacity:0.5;
                         z-index:-1;
                     }
                     .box{
