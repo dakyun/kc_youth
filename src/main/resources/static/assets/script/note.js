@@ -69,7 +69,7 @@ function applyNote() {
         contact: contact,
         cnt: cnt,
         type: type,
-        addr: addr + addr_add,
+        addr: (addr + " " + addr_add).trim(),
         use_yn: "Y",
         reg_dt: new Date().toISOString(),
         chg_dt: new Date().toISOString(),
