@@ -73,9 +73,9 @@
                 </label>
                 <span class="mini">택배발송을 원하시면 체크 후 주소를 입력해주세요.<br>*택배비 5권당 4,000원</span>
                 <div class="etc n2" style="display:none;">
-                    <button type="button" onclick="execDaumPostcode()">주소 검색</button>
-                    <input id="addr" class="input-style yet" type="text" name="receive" placeholder="배송 받으실 주소를 정확히 입력하세요" readonly>
-                    <input id="addr_add" class="input-style yet" type="text" name="receive" placeholder="배송 받으실 주소를 정확히 입력하세요">
+                    <button class="addrbtn" type="button" onclick="execDaumPostcode()"><span>주소 검색</span></button>
+                    <input id="addr" class="input-style yet" type="text" name="receive" placeholder="주소를 검색하세요" readonly>
+                    <input id="addr_add" class="input-style yet" type="text" name="receive" placeholder="상세주소를 입력하세요">
                 </div>
                 <label class="flex last">
                     <input type="radio" onchange="setDisplay2();setDisplay3();" id="pad" name="receive" value="I" />

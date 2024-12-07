@@ -160,6 +160,30 @@ img{
             .etc{
                 margin-top:px(20);
                 width:100%;
+                &.n2{
+                  position:relative;
+                  .addrbtn{
+                    span{
+                      font-size:px(30);
+                      display: flex;
+                      margin-left: px(30);
+                      align-items: center;
+                      justify-content: flex-start;
+                      margin-bottom:px(10);
+                      color:#7e7e7e;
+                      &::after{
+                        content:'';
+                        display:inline-block;
+                        background:url(../images/ico_search.png) no-repeat center center / 45% ;
+                        width:px(50);
+                        height:px(55);
+                      }
+                    }
+                  }
+                  .input-style:nth-of-type(2){
+                    margin-top:px(16);
+                  }
+                }
             }
             &.last{
               margin-bottom:px(50);

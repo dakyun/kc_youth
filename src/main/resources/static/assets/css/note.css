@@ -151,6 +151,28 @@ img {
   margin-top: 2.6666666667vw;
   width: 100%;
 }
+#noteSell .note-box .row .etc.n2 {
+  position: relative;
+}
+#noteSell .note-box .row .etc.n2 .addrbtn span {
+  font-size: 4vw;
+  display: flex;
+  margin-left: 4vw;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.3333333333vw;
+  color: #7e7e7e;
+}
+#noteSell .note-box .row .etc.n2 .addrbtn span::after {
+  content: "";
+  display: inline-block;
+  background: url(../images/ico_search.png) no-repeat center center/45%;
+  width: 6.6666666667vw;
+  height: 7.3333333333vw;
+}
+#noteSell .note-box .row .etc.n2 .input-style:nth-of-type(2) {
+  margin-top: 2.1333333333vw;
+}
 #noteSell .note-box .row.last {
   margin-bottom: 6.6666666667vw;
 }
