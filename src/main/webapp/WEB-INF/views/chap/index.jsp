@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="맑은샘광천교회 청년부 2024" />
     <meta property="og:description" content="맑은샘광천교회 청년부 2024 연말결산 페이지입니다." />
-    <meta property="og:image" content="https://kwangchunyouth.com/assets/imgaes/book.jpg" />
+    <meta property="og:image" content="https://kwangchunyouth.com/assets/imgaes/recap_thumb.jpg" />
     <meta property="og:url" content="https://kwangchunyouth.com" />
     <meta property="og:type" content="website" />
     <title>맑은샘광천교회 청년부 2024</title>
