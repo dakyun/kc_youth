@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="/assets/css/note.css?ts=${System.currentTimeMillis()}">
     <script src="/assets/script/note.js?ts=${System.currentTimeMillis()}"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
+<body>
+<div class="allwrap">
 <header>
     <img src="/assets/images/note_01.jpg">
 </header>
@@ -62,15 +65,27 @@
             <span class="s-txt">수령 방법<em>*</em></span>
             <div class="radio">
                 <label class="flex">
-                    <input type="radio" onchange="setDisplay2()" name="receive" value="C" checked />
-                    <span class="word"><strong>현장수령</strong><span class="mini">맑은샘광천교회 주일 청년부예배 전후 본당 로비<br>(12/15~12/31)<br>*자세한 일정은 추후 공지될 예정입니다.</span></span>
+                    <input type="radio" onchange="setDisplay2();setDisplay3()" name="receive" value="C" checked />
+                    <span class="word"><strong>현장수령</strong></span>
                 </label>
+                <span class="mini">맑은샘광천교회 주일 청년부예배 전,후 본당 로비에서 수령<br>(12/15~12/31) *자세한 일정은 추후 공지 예정입니다.</span>
                 <label class="flex">
-                    <input type="radio" onchange="setDisplay2()" id="parcel" name="receive" value="D" />
-                    <span class="word"><strong>택배 발송</strong><span class="mini">택배비 5권당 4,000원</span></span>
+                    <input type="radio" onchange="setDisplay2();setDisplay3();" id="parcel" name="receive" value="D" />
+                    <span class="word"><strong>택배발송</strong></span>
                 </label>
+                <span class="mini">택배발송을 원하시면 체크 후 주소를 입력해주세요.<br>*택배비 5권당 4,000원</span>
                 <div class="etc n2" style="display:none;">
-                    <input id="addr" class="input-style yet" type="text" name="receive" placeholder="배송 받으실 주소를 정확히 입력하세요">
+                    <button class="addrbtn" type="button" onclick="execDaumPostcode()"><span>주소 검색</span></button>
+                    <input id="addr" class="input-style yet" type="text" name="receive" placeholder="주소를 검색하세요" readonly>
+                    <input id="addr_add" class="input-style yet" type="text" name="receive" placeholder="상세주소를 입력하세요">
+                </div>
+                <label class="flex last">
+                    <input type="radio" onchange="setDisplay2();setDisplay3();" id="pad" name="receive" value="I" />
+                    <span class="word"><strong>아이패드 파일</strong></span>
+                </label>
+                <span class="mini">파일로 받기를 원하시면 체크 후 이메일을 입력해주세요.<br>*디지털 말씀노트(12/15부터 순차 발송)</span>
+                <div class="etc n3" style="display:none;">
+                    <input id="email" class="input-style yet" type="text" name="receive" placeholder="ex)abc123@naver.com">
                 </div>
             </div>
         </div>
@@ -99,6 +114,7 @@
 <footer class="section">
      <a href="http://pf.kakao.com/_xcBxouM"><img src="/assets/images/note_03.jpg"></a>
 </footer>
+</div>
 <script>
     /* contact copy 버튼 */
     document.execCommand("copy");

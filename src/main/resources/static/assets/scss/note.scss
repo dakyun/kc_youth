@@ -69,8 +69,8 @@ img{
                 font-size:px(30);
                 border:none;
                 &:placeholder{
-                    color:#7e7e7e;
-                    font-size:px(30);
+                    color:#a6a6a6;
+                    font-size:px(28);
                 }
             }
             .radio{
@@ -82,17 +82,18 @@ img{
                 font-size:px(26);
                 color:#7e7e7e;
                 line-height:1.5;
+                margin-left:unset;
               }
               .word{
                 display:flex;
                 align-items:flex-start;
-                gap:px(20);
+                gap:px(30);
                 margin-left:0;
               }
             }
             label {
                 line-height:px(50);
-                width:95%;
+                width:100%;
                 margin-bottom:4vw;
                 span{
                     font-size:px(28);
@@ -159,6 +160,30 @@ img{
             .etc{
                 margin-top:px(20);
                 width:100%;
+                &.n2{
+                  position:relative;
+                  .addrbtn{
+                    span{
+                      font-size:px(30);
+                      display: flex;
+                      margin-left: px(30);
+                      align-items: center;
+                      justify-content: flex-start;
+                      margin-bottom:px(10);
+                      color:#7e7e7e;
+                      &::after{
+                        content:'';
+                        display:inline-block;
+                        background:url(../images/ico_search.png) no-repeat center center / 45% ;
+                        width:px(50);
+                        height:px(55);
+                      }
+                    }
+                  }
+                  .input-style:nth-of-type(2){
+                    margin-top:px(16);
+                  }
+                }
             }
             &.last{
               margin-bottom:px(50);
@@ -168,7 +193,15 @@ img{
                   display:flex;
                   gap:px(10);
                   line-height:unset;
-                  margin-bottom:px(30);
+                  margin-bottom:px(15);
+                  margin-top:px(40);
+                  &:nth-of-type(1){
+                    margin-top:unset;
+                  }
+                  &.last{
+                    border-top:px(1) solid #e9e9e9;
+                    padding-top:px(30);
+                  }
                 }
               }
             }
@@ -243,7 +276,7 @@ img{
       }
     }
     .alert{
-      font-size:px(26);
+      font-size:px(24);
       color:#bbb;
       text-align:center;
       letter-spacing:px(-1);

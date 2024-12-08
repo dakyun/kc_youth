@@ -162,7 +162,7 @@ $(document).ready(function () {
 
 const sections = $(".section");
 const speed = 600;
-const speedSmallScreen = 500; // 750px 이하일 때 적용될 속도
+const speedSmallScreen = 600; // 750px 이하일 때 적용될 속도
 let delTargetPostObj = null;
 
 // 스크롤 애니메이션
@@ -288,6 +288,51 @@ $('#comment').keyup(function (e) {
     };
 });
 
+$(window).on('resize', function() {
+    if ($(window).width() <= 750) {
+        $('ul .post-item .inner').each(function(index, item) {
+            var rvTxt = $(this).find('.contain').height();
+            var winVw = $(window).width();
+            var valPer = winVw / 100;
+            var value = rvTxt / valPer;
+            if ($(this).hasClass("ht-content")) {
+                if (value < 10) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
+            } else {
+                if (value < 15) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
+            }
+        });
+    }
+});
+
+// 초기 로드 시에도 함수가 호출되도록 함
+$(document).ready(function() {
+    if ($(window).width() <= 750) {
+        $('ul .post-item .inner').each(function(index, item) {
+            var rvTxt = $(this).find('.contain').height();
+            var winVw = $(window).width();
+            var valPer = winVw / 100;
+            var value = rvTxt / valPer;
+            if ($(this).hasClass("ht-content")) {
+                if (value < 10) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
+            } else {
+                if (value < 15) {
+                    $(this).find('.more').hide();
+                    $(this).css("pointer-events", "none");
+                }
+            }
+        });
+    }
+});
+
 // '더보기' 누를 시 모달 창 팝업하는 함수
 function calHeight() {
     $('ul .post-item .inner').each(function(){
@@ -305,7 +350,7 @@ function calHeight() {
             }
         } else if (window.innerWidth <= 750) {
             // 750px 이하 화면일 때
-            if(rvTxtInVw < 32){
+            if(rvTxtInVw < 17){
                 $(this).find('.more').hide();
                 $(this).css("pointer-events","none");
             } else {
@@ -319,6 +364,13 @@ function calHeight() {
 
 // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
 $(document).ready(function() {
+    $('#resigter').on('click', function(event) {
+        if ($(window).width() >= 1200) {
+            event.preventDefault(); // 기본 동작을 막음
+            alert('모바일로 주문 부탁 드립니다!');
+            $(this).attr('href', '#'); // href 속성을 '#'으로 변경
+        }
+    });
     calHeight();
 
     // '더보기' 버튼 클릭 시 모달에 내용 추가 및 모달 표시
@@ -529,3 +581,25 @@ document.getElementById('submit-button').onclick = e => {
     }
 
 };
+
+function initparticles() {
+    hearts();
+}
+function hearts() {
+    $.each($(".particletext.hearts"), function(){
+        var heartcount = ($(this).width()/50)*5;
+        for(var i = 0; i <= heartcount; i++) {
+            var size = ($.rnd(60,120)/10);
+            $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,200) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+        }
+    });
+}
+
+
+jQuery.rnd = function(m,n) {
+    m = parseInt(m);
+    n = parseInt(n);
+    return Math.floor( Math.random() * (n - m + 1) ) + m;
+}
+
+initparticles();

@@ -6,6 +6,7 @@ import com.kc.thanks.chap.dto.requestDTO.ReplyDeleteRequestDTO;
 import com.kc.thanks.chap.dto.requestDTO.ReplyWriteRequestDTO;
 import com.kc.thanks.chap.dto.responseDTO.ReplyListResponseDTO;
 import com.kc.thanks.chap.service.ReplyService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +33,9 @@ public class MainController {
     }
 
     @GetMapping("/index")
-    public String index(Model model, @ModelAttribute("p") Page page, @RequestParam(value="searchName", defaultValue="") String searchName, HttpSession session) {
+    public String index(HttpServletRequest req, Model model, @ModelAttribute("p") Page page, @RequestParam(value="searchName", defaultValue="") String searchName, HttpSession session) {
+        String userAgent = req.getHeader("User-Agent");
+        page.setPageAmount(isMobile(userAgent));
         log.info("index로 요청 들어옴!");
         log.info("pageNo: {}", page.getPageNo());
         if(!searchName.equals("")) {
@@ -106,5 +109,9 @@ public class MainController {
 
             return ResponseEntity.ok(response);
         }
+    }
+
+    private boolean isMobile(String userAgent) {
+        return userAgent.contains("Mobile") || userAgent.contains("Android") || userAgent.contains("iPhone");
     }
 }
