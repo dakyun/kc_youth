@@ -249,7 +249,7 @@
                     <span>02.29 - 03.02</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt10.webp" alt=""></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=DoDRDkh1Q80"><img src="/assets/images/yt10.webp" alt=""></a>
                     <h3 class="bold">2청 겨울수련회 리뷰</h3>
                     <span>01.18 - 20</span>
                 </li>
