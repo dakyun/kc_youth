@@ -239,7 +239,7 @@
                     <span>07.14 - 25</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt08.webp" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/m0WbWa8c_W8?si=pF-yfdUp1NBgg7cB"><img src="/assets/images/yt08.webp" alt=""></a>
                     <h3 class="bold">태국 단기선교 보고영상</h3>
                     <span>07.22 - 30</span>
                 </li>
