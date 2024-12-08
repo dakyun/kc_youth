@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"/>
+    <title>맑은샘광천교회 청년부 2024</title>
     <meta property="og:title" content="맑은샘광천교회 청년부 2024" />
     <meta property="og:description" content="맑은샘광천교회 청년부 2024 연말결산 페이지입니다." />
     <meta property="og:image" content="https://kwangchunyouth.com/assets/images/recap_thumb.jpg" />
     <meta property="og:url" content="https://kwangchunyouth.com" />
     <meta property="og:type" content="website" />
-    <title>맑은샘광천교회 청년부 2024</title>
     <link rel="stylesheet" href="/assets/css/slick.css?ts=${System.currentTimeMillis()}">
     <link rel="stylesheet" href="/assets/css/guide.css?ts=${System.currentTimeMillis()}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?ts=${System.currentTimeMillis()}"/>
@@ -73,7 +73,7 @@
     </div>
     <div class="container">
         <div id="header-text" class="bold">
-            <h3 id="header-text-sub1">MALGEUNSAEM<br>KWANGCHUN CHURCH</h3>
+            <h3 id="header-text-sub1">MALGEUNSAEM<br>KWANGCHUN CHURCH &#8224;</h3>
             <h3 id="header-text-sub2">ADIEU!<br>THE MEMORY OF 2024</h3>
         </div>
     </div>
@@ -83,7 +83,7 @@
             <li class="on"><a href="#section1"><i class="n1"></i><span class="name">Intro</span></a></li>
             <li><a href="#discography"><i class="n5"></i><span class="name">Youtubes</span></a></li>
             <li><a href="#section3"><i class="n3"></i><span class="name">Event</span></a></li>
-            <li><a href="#posting"><i class="n4"></i><span class="name">Posting</span></a></li>
+            <li><a href="#posting"><i class="n4"></i><span class="name">Thank You Note</span></a></li>
             <li><a href="#section2"><i class="n2"></i><span class="name">Card News</span></a></li>
         </ul>
     </div>
@@ -104,7 +104,7 @@
                 <a href="#section3" class="nav-link bold"><span>03</span>Event</a>
             </li>
             <li class="nav-item">
-                <a href="#posting" class="nav-link bold"><span>04</span>Posting</a>
+                <a href="#posting" class="nav-link bold"><span>04</span>Thank You Note</a>
             </li>
             <li class="nav-item">
                 <a href="#section2" class="nav-link bold"><span>05</span>Card News</a>
@@ -148,7 +148,7 @@
             다가오는 새해에도 하나님께서 예비하신 더 큰 은혜와 계획을 기대하며 믿음의 발걸음을 함께 내딛기를 소망합니다.
             서로를 더 깊이 사랑하고 하나님의 뜻을 이루어가는 아름다운 청년부로 성장하길 기대합니다. 사랑하고 축복합니다.
         </p>
-        <p class="show-up delay-more">- 맑은샘광천교회 청년부 디렉터 김기도 목사 -</p>
+        <p class="show-up delay-more2">- 맑은샘광천교회 청년부 디렉터 김기도 목사 -</p>
     </div>
 </div>
 <main>
@@ -204,52 +204,52 @@
         <div class="container show-up delay-more ytSwiper">
             <ul id="discography-albums" class="swiper-wrapper">
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/hr64qwRgM84?si=fewY_hS4Pu3-mY8z"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/hr64qwRgM84?si=fewY_hS4Pu3-mY8z"><img src="/assets/images/yt01.webp" alt=""></a>
                     <h3 class="bold">청년 1-2부 여름 연합수련회 리뷰</h3>
                     <span>08.15 - 17</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/sz5cNEL8N7k?si=tqEg4ribvpDKXtnE"><img src="/assets/images/yt03.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/sz5cNEL8N7k?si=tqEg4ribvpDKXtnE"><img src="/assets/images/yt02.webp" alt=""></a>
                     <h3 class="bold">전도축제 청년부 워십</h3>
                     <span>11.04</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/s0ZZ3-bGerg?si=5wR3ge4uzPq4CF_6"><img src="/assets/images/yt02.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/s0ZZ3-bGerg?si=5wR3ge4uzPq4CF_6"><img src="/assets/images/yt03.webp" alt=""></a>
                     <h3 class="bold">새가족 홈커밍데이 홍보영상</h3>
                     <span>06.30</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/LIR4djOWjac?si=Iq_6-YFlxBEXwQ_C"><img src="/assets/images/yt01.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/LIR4djOWjac?si=Iq_6-YFlxBEXwQ_C"><img src="/assets/images/yt04.webp" alt=""></a>
                     <h3 class="bold">맑은샘광천교회 청년부 체육대회</h3>
                     <span>04.21(2청) - 04.28(1청)</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/AxJxAJ_5_ho?si=a00DSGzvRHOYhX8R"><img src="/assets/images/yt01.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/AxJxAJ_5_ho?si=a00DSGzvRHOYhX8R"><img src="/assets/images/yt05.webp" alt=""></a>
                     <h3 class="bold">청년부 1&2 하반기 바베큐파티</h3>
                     <span>10.06(1청) - 10.13(2청)</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://www.youtube.com/watch?v=iewmfkwgYyo"><img src="/assets/images/yt02.jpg" alt=""></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=iewmfkwgYyo"><img src="/assets/images/yt06.webp" alt=""></a>
                     <h3 class="bold">1학기 찬양예배 리뷰</h3>
                     <span>05.12</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt03.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt07.webp" alt=""></a>
                     <h3 class="bold">인도네시아 단기선교 보고영상</h3>
                     <span>07.14 - 25</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt08.webp" alt=""></a>
                     <h3 class="bold">태국 단기선교 보고영상</h3>
                     <span>07.22 - 30</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/U5nyf68M-D0?si=KgC4Z3nAmAuETrqR"><img src="/assets/images/yt09.webp" alt=""></a>
                     <h3 class="bold">1청 겨울수련회 리뷰</h3>
                     <span>02.29 - 03.02</span>
                 </li>
                 <li class="album-info swiper-slide">
-                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt04.jpg" alt=""></a>
+                    <a target="_blank" href="https://youtu.be/yqaE9BuePS8?si=XiXvvjUJwcUwjhoS"><img src="/assets/images/yt10.webp" alt=""></a>
                     <h3 class="bold">2청 겨울수련회 리뷰</h3>
                     <span>01.18 - 20</span>
                 </li>
@@ -260,10 +260,10 @@
         <div class="title-box center">
             <div class="center">
                 <span class="sub show-up">2024 연말결산 이벤트</span>
-                <strong class="show-up delay">Share<br>Your Message!</strong>
+                <strong class="show-up delay">Share <br>Your Message!</strong>
             </div>
-            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br><br>
-                12월 29일(주) 인스타그램 라이브 추첨을 통해<br class="nd">2025 말씀노트를 선물로 드려요!
+            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br class="nd"><br>
+                12월 29일(주) 인스타그램 라이브 추첨을 통해 <br class="nd">2025 말씀노트를 선물로 드려요!
                 <span class="mini">* 자세한 참여방법 및 유의사항은 하단 '꼭! 확인하세요!'를 참고하세요</span>
             </p>
         </div>
@@ -460,15 +460,15 @@
     <section id="section2" class="news wrapper bg-wt qmenu section">
         <div class="title-box">
             <div class="left">
-                <span class="sub show-up">두근두근 1분기 카드뉴스 준비중!</span>
-                <strong class="show-up delay">Card News of 1Q</strong>
+                <span class="sub show-up">두근두근 2024 총결산 카드뉴스 준비중!</span>
+                <strong class="show-up delay">Recap Card News</strong>
             </div>
             <a target="_blank" href="https://www.instagram.com/kwangchun_youth/" class="org-btn show-up delay"><span>청년부 인스타그램 바로가기</span></a>
         </div>
         <div class="card-swiper show-up delay-more">
             <div class="swiper-wrapper">
                 <div class="swiper-slide coming">
-                    <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>1분기 사역 카드뉴스가 다음주 주일(12/15)에 공개됩니다!</span></div>
+                    <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>2024 사역 카드뉴스가 다음주(12/15)부터<br>순차적으로 공개됩니다!</span></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="/assets/images/1q_card02.jpg" alt="">
@@ -523,21 +523,31 @@
                 <span class="sub">맑은샘광천교회 청년부에 대해 더 알고 싶으시다면?</span>
                 <strong>Follow Our SNS!</strong>
             </div>
-            <a href="" class="mimo-btn show-up delay"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
-            <a href="" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
+            <a href="https://www.instagram.com/kwangchun_youth/" class="mimo-btn show-up delay"><span><i class="fab fa-instagram"></i>@kwangchun_youth</span></a>
+            <a href="https://www.youtube.com/@%EB%A7%91%EC%9D%80%EC%83%98%EA%B4%91%EC%B2%9C%EA%B5%90%ED%9A%8C%EC%B2%AD%EB%85%84%EB%B6%80" class="mimo-btn show-up delay"><span class="n2"><i class="fab fa-youtube"></i>맑은샘광천교회 청년부</span></a>
         </div>
         <div id="mimoCanvas"></div>
+        <div class="mo-mimo">
+            <span class="item n1"></span>
+            <span class="item n2"></span>
+            <span class="item n3"></span>
+            <span class="item n4"></span>
+        </div>
+        <div class="textcontainer">
+            <span class="particletext hearts">Hearts</span>
+        </div>
     </section>
 </main>
 <footer>
     <div class="container">
         <div class="footer-box">
             <div class="sns-box">
-                <h3>당신 근처의 좋은 교회, 맑은샘광천교회 청년부!</h3>
+                <img src="/assets/images/emo06.png" class="church">
+                <h3>당신 근처의 좋은 교회,<br>맑은샘광천교회 청년부!</h3>
                 <p>예배장소 | 맑은샘광천교회 2층 그레이스홀, 상월곡역 3번 출구<br>주일예배 | 주일 오후 2시<br></p>
             </div>
             <div id="copyright">
-                <p>해당 페이지는 2025년 1월 31일까지 운영되며 <br />이벤트 참여 시 제공받은 정보들은 페이지 종료와 함께 소멸될 예정입니다.<br><br>© 2024 맑은샘광천교회 청년부 디자인팀</p>
+                <p>*해당 페이지는 2025년 1월 31일까지 운영되며 <br />이벤트 참여 시 제공받은 정보들은 페이지 종료와 함께 소멸될 예정입니다.<br><br><span>© 2024 맑은샘광천교회 청년부 예배국 디자인팀&온라인사역팀&미디어팀</span></p>
             </div>
         </div>
     </div>
@@ -619,9 +629,6 @@
     const globalForceDistance = 200;
     const globalForceMagnitude = 0.01;
 
-
-
-
     const renderBox = document.getElementById('mimoCanvas');
 
     const render = Render.create({
@@ -644,7 +651,8 @@
     const characters = [];
 
     function getRandomPosition(maxWidth, maxHeight) {
-        const x = Math.random() * maxWidth;
+        const spacingMultiplier = maxWidth <= 750 ? 1.5 : 10; // 750px 이하일 때 간격을 넓힘
+        const x = Math.random() * maxWidth * spacingMultiplier;
         const y = Math.random() * (maxHeight * 0.3) - 300;
         return { x, y };
     }
@@ -698,8 +706,6 @@
             const deltaY = character.position.y - mousePosition.y;
             const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-
-
             if (distance < globalForceDistance) {
                 const forceMagnitude = globalForceMagnitude * (globalForceDistance - distance)
                 const force = {
@@ -751,10 +757,17 @@
         World.remove(world, characters);
         characters.length = 0;
 
-
         const ratio = renderBox.offsetWidth / 1000;
+        const frictionAir = renderBox.offsetWidth <= 750 ? 1.2 : globalCharacterFrictionAir;
+        const angularDamping = renderBox.offsetWidth <= 750 ? 1.2 : globalCharacterAngularDamping;
+        const scaleMultiplier = renderBox.offsetWidth <= 750 ? 2 : 1;
+
         charactersData.forEach(characterData => {
             const character = createCharacter(characterData, ratio);
+            character.frictionAir = frictionAir;
+            character.angularDamping = angularDamping;
+            character.render.sprite.xScale *= scaleMultiplier;
+            character.render.sprite.yScale *= scaleMultiplier;
             characters.push(character);
             World.add(world, character);
         });
