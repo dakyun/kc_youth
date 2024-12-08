@@ -357,8 +357,6 @@ function calHeight() {
                 $(this).addClass('more-layer');
             }
         }
-
-        console.log('Height in px:', rvTxt, 'Height in vw:', rvTxtInVw);
     })
 };
 
