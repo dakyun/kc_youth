@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" id="noteApply" class="pp-btn"><span>주문서 제출0하기</span></button>
+        <button type="button" id="noteApply" class="pp-btn"><span>주문서 제출하기</span></button>
         <span class="alert">*하단 신청하기 버튼 제출 시 개인정보수집에 동의한 것으로 간주됩니다.</span>
     </div>
     <div class="margin-box"></div>
