@@ -80,7 +80,7 @@ $(document).ready(function () {
     const newsSwiper = new Swiper(".card-swiper", {
         effect: "cards",
         grabCursor: true,
-        allowTouchMove : false,
+        allowTouchMove : true,
         observer: true,
         observeParents: true,
     });

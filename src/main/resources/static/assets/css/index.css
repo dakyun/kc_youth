@@ -432,24 +432,6 @@ header #top-menu {
     height: 16vw;
   }
 }
-#resigter a::before {
-  content: "";
-  display: inline-block;
-  width: 187px;
-  height: 46px;
-  background: url(../images/resi_item.png) no-repeat center center/100%;
-  position: absolute;
-  top: -60px;
-  left: -17px;
-  animation: moving 2s infinite ease-in-out;
-}
-@media screen and (max-width: 750px) {
-  #resigter a::before {
-    background: url(../images/resi_item.png) no-repeat center center/85%;
-    top: -13.3333333333vw;
-    left: -7.666667vw;
-  }
-}
 @media screen and (max-width: 750px) {
   #resigter {
     bottom: 6.6666666667vw;
@@ -1399,25 +1381,25 @@ header #top-menu {
   border-top: 1px solid #222;
   border-bottom: 1px solid #222;
   -moz-column-gap: 150px;
-  column-gap: 150px;
+       column-gap: 150px;
 }
 @media screen and (max-width: 750px) {
   .flow-text {
     height: 26.6666666667vw;
     -moz-column-gap: 20vw;
-    column-gap: 20vw;
+         column-gap: 20vw;
   }
 }
 .flow-text .list {
   display: flex;
   -moz-column-gap: 150px;
-  column-gap: 150px;
+       column-gap: 150px;
   align-items: center;
 }
 @media screen and (max-width: 750px) {
   .flow-text .list {
     -moz-column-gap: 13.3333333333vw;
-    column-gap: 13.3333333333vw;
+         column-gap: 13.3333333333vw;
   }
 }
 .flow-text .list li {
@@ -1586,12 +1568,12 @@ header #top-menu {
   display: flex;
   align-items: center;
   -moz-column-gap: 5px;
-  column-gap: 5px;
+       column-gap: 5px;
 }
 @media screen and (max-width: 750px) {
   .title-box .org-btn span {
     -moz-column-gap: 0.6666666667vw;
-    column-gap: 0.6666666667vw;
+         column-gap: 0.6666666667vw;
     font-size: 2.9333333333vw;
   }
 }
@@ -1755,7 +1737,7 @@ header #top-menu {
     right: 0;
     bottom: 0;
     background: url(../images/cardnews.jpg) no-repeat center center/100%;
-    filter: blur(3px);
+    filter: blur(10px);
     opacity: 0.5;
     z-index: -1;
   }
@@ -1772,6 +1754,7 @@ header #top-menu {
     color: #fff;
     padding-top: 60px;
     position: relative;
+    width: 100%;
   }
   .news .card-swiper .swiper-slide.coming .box h4::after {
     content: "";
@@ -1826,7 +1809,7 @@ header #top-menu {
     right: 0;
     bottom: 0;
     background: url(../images/cardnews.jpg) no-repeat center center/100%;
-    filter: blur(3px);
+    filter: blur(10px);
     opacity: 0.5;
     z-index: -1;
   }
@@ -1843,6 +1826,7 @@ header #top-menu {
     color: #fff;
     padding-top: 8vw;
     position: relative;
+    width: 100%;
   }
   .news .card-swiper .swiper-slide.coming .box h4::after {
     content: "";
@@ -2621,7 +2605,7 @@ header #top-menu {
     display: flex;
     align-items: center;
     -moz-column-gap: 10px;
-    column-gap: 10px;
+         column-gap: 10px;
     font-weight: 300;
   }
   .mimo .mimo-btn i {
@@ -2665,7 +2649,7 @@ header #top-menu {
     display: flex;
     align-items: center;
     -moz-column-gap: 2.6666666667vw;
-    column-gap: 2.6666666667vw;
+         column-gap: 2.6666666667vw;
     font-weight: 300;
   }
   .mimo .mimo-btn i {
@@ -2895,7 +2879,7 @@ header #top-menu {
     width: 100%;
     font-size: 3.2vw;
     -moz-column-gap: 4vw;
-    column-gap: 4vw;
+         column-gap: 4vw;
   }
   .guide.event .event-useguide .content ul li em {
     color: #333;

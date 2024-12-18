@@ -132,7 +132,7 @@
     <div id="album-about" class="section">
         <div class="title-box show-up">
             <div class="left">
-                <span class="sub">Letter from Ki-do</span>
+                <span class="sub">Letter from Kid-O</span>
                 <strong>사랑하는 <br>맑은샘광천교회 청년 여러분!</strong>
             </div>
         </div>
@@ -158,7 +158,7 @@
                 <span class="sub show-up">올 한해 청년부 사역 어떤 것들이 있었나요?</span>
                 <strong class="show-up delay">What We Did in 2024</strong>
             </div>
-            <a href="#;" onclick="alert('12월 15일 공개 예정입니다!')" class="org-btn show-up delay"><span>연말결산 사진첩 드라이브 바로가기</span></a>
+            <%--<a href="#;" onclick="alert('12월 15일 공개 예정입니다!')" class="org-btn show-up delay"><span>연말결산 사진첩 드라이브 바로가기</span></a>--%>
         </div>
 
         <div class="flow-text n1 show-up delay-more">
@@ -262,7 +262,7 @@
                 <span class="sub show-up">2024 연말결산 이벤트</span>
                 <strong class="show-up delay">Share <br>Your Message!</strong>
             </div>
-            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀<br class="nd">감사제목을 나눠주세요<br class="nd"><br>
+            <p class="show-up delay-more">올 한해 개인의 삶 또는 공동체에서 느낀 <br class="nd">감사제목을 나눠주세요<br class="nd"><br>
                 12월 29일(주) 인스타그램 라이브 추첨을 통해 <br class="nd">2025 말씀노트를 선물로 드려요!
                 <span class="mini">* 자세한 참여방법 및 유의사항은 하단 '꼭! 확인하세요!'를 참고하세요</span>
             </p>
@@ -460,61 +460,108 @@
     <section id="section2" class="news wrapper bg-wt qmenu section">
         <div class="title-box">
             <div class="left">
-                <span class="sub show-up">두근두근 2024 총결산 카드뉴스 준비중!</span>
+                <span class="sub show-up">2024 총결산 카드뉴스가 도착했어요! </span>
                 <strong class="show-up delay">Recap Card News</strong>
             </div>
             <a target="_blank" href="https://www.instagram.com/kwangchun_youth/" class="org-btn show-up delay"><span>청년부 인스타그램 바로가기</span></a>
         </div>
         <div class="card-swiper show-up delay-more">
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card01.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card02.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card03.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card04.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card05.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card06.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card07.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card08.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card09.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card10.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card11.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card12.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card13.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card14.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card15.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card16.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card17.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card18.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card19.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card20.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card21.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card22.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card23.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card24.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card25.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card26.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card27.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card28.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card29.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/cardnews/card30.webp" alt="">
+                </div>
                 <div class="swiper-slide coming">
-                    <div class="box"><h4>COMING SOON</h4><span>청년부 인스타그램 미공개 사진 포함,<br>2024 사역 카드뉴스가 다음주(12/15)부터<br>순차적으로 공개됩니다!</span></div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card02.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card03.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card04.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card05.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card06.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card08.jpg" alt="">
+                    <div class="box"><h4></h4><span>더 많은 카드뉴스는<br>청년부 인스타그램에서 확인하세요!</span></div>
                 </div>
             </div>
         </div>
-        <%--<div class="card-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card01.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card02.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card03.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card04.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card05.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card06.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/1q_card08.jpg" alt="">
-                </div>
-            </div>
-        </div>--%>
     </section>
     <section class="mimo wrapper bg-org section">
         <!-- REF:소이정 -->

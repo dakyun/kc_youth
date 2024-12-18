@@ -168,22 +168,22 @@ header {
       width:px(120);
       height:px(120)
     };
-    &::before{
-      content:'';
-      display:inline-block;
-      width:187px;
-      height:46px;
-      background:url(../images/resi_item.png) no-repeat center center / 100%;
-      position:absolute;
-      top:-60px;
-      left:-17px;
-      animation:moving 2s infinite ease-in-out;
-      @include mq('small-screen-3'){
-        background:url(../images/resi_item.png) no-repeat center center / 85%;
-        top:px(-100);
-        left:-7.666667vw;
-      }
-    }
+    // &::before{
+    //   content:'';
+    //   display:inline-block;
+    //   width:187px;
+    //   height:46px;
+    //   background:url(../images/resi_item.png) no-repeat center center / 100%;
+    //   position:absolute;
+    //   top:-60px;
+    //   left:-17px;
+    //   animation:moving 2s infinite ease-in-out;
+    //   @include mq('small-screen-3'){
+    //     background:url(../images/resi_item.png) no-repeat center center / 85%;
+    //     top:px(-100);
+    //     left:-7.666667vw;
+    //   }
+    // }
   }
   @include mq('small-screen-3'){
     bottom:px(50);
