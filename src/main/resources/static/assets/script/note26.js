@@ -292,3 +292,16 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Swiper 초기화
+const topSwiper = new Swiper('.topSwiper', {
+    loop: true, // 무한 루프
+    autoplay: {
+        delay: 3000, // 3초마다 자동전환
+        disableOnInteraction: false // 사용자 스와이프 후에도 autoplay 유지
+    },
+    pagination: {
+        el: '.topSwiper .swiper-pagination',
+        clickable: true // 점 클릭 시 해당 슬라이드 이동
+    }
+});

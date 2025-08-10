@@ -29,6 +29,18 @@
     .top_img .logo p strong {
         font-weight: 700;
     }
+    .top_img .topSwiper {
+        position: relative;
+    }
+    .top_img .topSwiper .swiper-pagination {
+        position: absolute;
+        bottom: 3.90625vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .top_img .topSwiper .swiper-pagination .swiper-pagination-bullet-active {
+        background: #555;
+    }
     .content_gap {
         background: #f0f0f0;
         width: 100%;

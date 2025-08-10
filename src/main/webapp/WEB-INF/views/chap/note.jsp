@@ -7,17 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 말씀노트 사전판매</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/assets/css/resetfornote.css?ts=${System.currentTimeMillis()}">
     <link rel="stylesheet" href="/assets/css/note26.css?ts=${System.currentTimeMillis()}">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <div class="top_img">
     <div class="logo">
         <img src="/assets/images/note26/top_logo.png" alt="">
         <p><strong>사전예약</strong> (8/15~10/15)</p>
     </div>
-    <img src="/assets/images/note26/note_top.jpg" alt="">
+    <div class="topSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/note26/top_img01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/images/note26/top_img02.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <img src="/assets/images/note26/top_img10.jpg" alt="">
 </div>
 <div class="content_gap"></div>
 <!-- 중간 네비게이션 -->
@@ -132,7 +141,7 @@
                     <strong id="totalPrice">12,000원</strong>
                 </div>
             </div>
-            <a href="https://aq.gy/f/Q%5exCr" class="sendmoney">송금하기</a>
+            <a href="https://aq.gy/f/Q%5exCr" class="sendmoney" target="_blank">송금하기</a>
 
             <p class="alert">송금 후 현재 페이지의 "주문서 제출하기"를 꼭 눌러주세요!</p>
         </div>
