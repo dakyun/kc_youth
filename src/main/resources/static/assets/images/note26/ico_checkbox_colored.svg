@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="ico_checkbox" transform="translate(-107 -2176)">
+    <g id="사각형_42" data-name="사각형 42" transform="translate(107 2176)" fill="#f4633a" stroke="#f4633a" stroke-width="2">
+      <rect width="32" height="32" stroke="none"/>
+      <rect x="1" y="1" width="30" height="30" fill="none"/>
+    </g>
+    <path id="패스_47" data-name="패스 47" d="M41.738,1996.7l5.138,5.138,10.1-10.881" transform="translate(73.762 195.541)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>
