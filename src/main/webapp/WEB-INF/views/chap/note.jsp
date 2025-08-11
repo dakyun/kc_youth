@@ -81,7 +81,7 @@
 
                 <!-- 이메일 입력 영역 (디폴트 숨김) -->
                 <div class="etc n3" id="emailRow" style="display:none;">
-                    <input id="email" class="input-style yet" type="text" placeholder="파일을 받으실 메일주소를 입력해주세요.">
+                    <!-- JS로 input 여러 개 생성 -->
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
                     <!-- 택배 선택 시 노출 -->
                     <div class="etc n2" id="addressRow" style="display:none;">
                         <div class="wrapper">
-                            <button type="button" onclick="execDaumPostcode()">주소 검색</button>
+                            <button type="button" onclick="execDaumPostcode()">검색</button>
                             <input id="addr" class="input-style yet" type="text" placeholder="배송 받으실 주소를 정확히 입력하세요">
                         </div>
                         <input id="addr_add" class="input-style yet n2" type="text" name="receive" placeholder="상세 주소 입력">

@@ -310,14 +310,15 @@
 #noteSell .radio .etc.n2 button {
     white-space: nowrap;
     height: 9.1145833333vw;
-    padding: 0 2.6041666667vw;
+    padding: 0 2vw 0 8vw;
     border: 1px solid #E5E5E5;
     border-radius: 0.2604166667vw;
     background: #fff;
     font-size: 3.3854166667vw;
     font-weight: 500;
     color: #111;
-    text-align: left;
+    text-align: right;
+    background:url(../images/ico_search.png) no-repeat 2vw center / 22%;
 }
 #noteSell .radio .etc.n2 .input-style {
     flex: 1;
@@ -591,4 +592,52 @@
     100% {
         opacity: 0;
     }
+}/*# sourceMappingURL=note26ver2.css.map */
+
+#emailRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0416666667vw;
+}
+#emailRow .email-pair {
+    display: flex;
+    align-items: center;
+    gap: 1.0416666667vw;
+}
+#emailRow .email-pair input, #emailRow .email-pair select {
+    height: 9.1145833333vw;
+    border: 1px solid #E5E5E5;
+    border-radius: 0.2604166667vw;
+    padding: 0 2.6041666667vw;
+    font-size: 3.3854166667vw;
+    font-weight: 400;
+    color: #111;
+    text-align: left;
+}
+#emailRow .email-pair input::-moz-placeholder, #emailRow .email-pair select::-moz-placeholder {
+    color: #BDBDBD;
+}
+#emailRow .email-pair input::placeholder, #emailRow .email-pair select::placeholder {
+    color: #BDBDBD;
+}
+#emailRow .email-pair .local {
+    width: 31.25vw;
+}
+#emailRow .email-pair .at {
+    font-size: 3.6458333333vw;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    min-width: 2.6041666667vw;
+}
+#emailRow .email-pair .domain-select {
+    width: 55.9895833333vw;
+    flex: none;
+}
+#emailRow .email-pair .domain-select.less {
+    width: 16.9270833333vw;
+}
+#emailRow .email-pair .domain-input {
+    display: none;
+    width: 33.8541666667vw;
 }/*# sourceMappingURL=note26ver2.css.map */
