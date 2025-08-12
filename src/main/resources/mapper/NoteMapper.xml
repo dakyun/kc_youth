@@ -18,21 +18,28 @@
     </insert>
 
     <select id="getAllData" resultType="map">
-        select
-            seq as '순번',
-            name as '이름',
-            contact as '연락처',
-            cnt as '개수',
-            case
-                when type = 'C' THEN '현장수령'
-                when type = 'I' THEN '아이패드 파일'
-                else '택배발송'
-            end as '수령방법',
-            addr as '주소',
-            reg_dt as '신청시간'
-        from dbo.note with(nolock)
-        where use_yn = 'Y'
-        order by seq desc;
+        SELECT
+            n.seq AS '순번',
+            n.name AS '이름',
+            n.contact AS '연락처',
+            n.cnt AS '말씀 노트 개수',
+            CASE
+            WHEN n.type = 'C' THEN '현장수령'
+            WHEN n.type = 'I' THEN '아이패드 파일'
+            ELSE '택배발송'
+            END AS '수령방법',
+            n.addr AS '주소',
+            n.digital_cnt AS '디지털 노트 추가 개수',
+            STRING_AGG(ne.email, '|') AS '디지털 노트 신청 메일',
+            n.reg_dt AS '신청시간'
+        FROM dbo.note AS n WITH (NOLOCK)
+        LEFT JOIN dbo.note_email AS ne WITH (NOLOCK)
+        ON ne.note_seq = n.seq
+        WHERE n.use_yn = 'Y'
+        GROUP BY
+            n.seq, n.name, n.contact, n.cnt, n.type,
+            n.addr, n.digital_cnt, n.reg_dt
+        ORDER BY n.seq ASC;
     </select>
 
 </mapper>
