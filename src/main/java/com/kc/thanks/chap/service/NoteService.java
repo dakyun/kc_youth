@@ -19,7 +19,7 @@ import java.util.Map;
 @Slf4j
 @RequiredArgsConstructor
 public class NoteService {
-    private static final List<String> FIELD_ORDER = Arrays.asList("순번", "이름", "연락처", "개수", "수령방법", "주소", "신청시간");
+    private static final List<String> FIELD_ORDER = Arrays.asList("순번", "이름", "연락처", "말씀 노트 개수", "수령방법", "주소", "디지털 노트 추가 개수", "디지털 노트 신청 메일", "신청시간");
 
     private final NoteMapper mapper;
 
