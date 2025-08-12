@@ -123,7 +123,7 @@
                             <button type="button" onclick="execDaumPostcode()">검색</button>
                             <input id="addr" class="input-style yet" type="text" placeholder="배송 받으실 주소를 정확히 입력하세요">
                         </div>
-                        <input id="addr_add" class="input-style yet n2" type="text" name="receive" placeholder="상세 주소 입력">
+                        <input id="addr_add" class="input-style yet n2" type="text" placeholder="상세 주소 입력">
                     </div>
                 </div>
             </div>

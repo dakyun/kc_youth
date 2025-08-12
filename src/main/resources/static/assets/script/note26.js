@@ -289,10 +289,12 @@ digitalOpt.addEventListener('change', () => {
 [digitalMinus, digitalPlus, digitalNum].forEach(btn => {
     btn.addEventListener('click', () => {
         if (btn === digitalMinus) state.digital.qty = Math.max(1, state.digital.qty - 1);
-        else if (btn === digitalPlus) state.digital.qty += 1;
+        else if (btn === digitalPlus && state.digital.qty < 100) state.digital.qty += 1;
+        else if (btn === digitalPlus && state.digital.qty == 100) alert("한번에 주문 가능한 수량은 100개까지만 가능합니다.");
         else {
             const v = parseInt(prompt('수량을 입력하세요', state.digital.qty), 10);
-            if (!isNaN(v) && v > 0) state.digital.qty = v;
+            if (!isNaN(v) && v > 0 && v <= 100) state.digital.qty = v;
+            else if(!isNaN(v) && v > 100) alert("한번에 주문 가능한 수량은 100개까지만 가능합니다.");
         }
         // FIX: 먼저 입력 UI/값 반영 → 합계 갱신
         if (state.digital.enabled) renderEmailInputs();
@@ -313,7 +315,7 @@ digitalRemove.addEventListener('click', () => {
 
 /* ─ Events: 수령방법/주소 ─ */
 $$('input[name="receive"]').forEach(r=>{
-    r.addEventListener('change', ()=>{
+    r.addEventListener('click', ()=>{
         state.receive = r.value; // C or D
         if(state.receive==='D'){
             addrRow.style.display = '';
@@ -365,7 +367,10 @@ $('#orderForm')?.addEventListener('submit', e=>{
         return;
     }
 
+    setDate();
+
     alert('주문이 완료되었습니다.');
+    location.reload();
 });
 
 /* ─ Init ─ */
@@ -428,4 +433,8 @@ if (window.Swiper) {
         autoplay: { delay: 3000, disableOnInteraction: false },
         pagination: { el: '.topSwiper .swiper-pagination', clickable: true }
     });
+}
+
+function setData() {
+
 }
