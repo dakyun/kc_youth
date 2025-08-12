@@ -1,6 +1,8 @@
 package com.kc.thanks.chap.controller;
 
+import com.kc.thanks.chap.dto.requestDTO.NoteEmailRequestDTO;
 import com.kc.thanks.chap.dto.requestDTO.NoteWriteRequestDTO;
+import com.kc.thanks.chap.service.NoteEmailService;
 import com.kc.thanks.chap.service.NoteService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -13,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +27,7 @@ public class NoteController {
     @Value("${app.admin-secret-password}")
     private String ADMIN_SECRET_PASSWORD;
     private final NoteService noteService;
+    private final NoteEmailService noteEmailService;
 
     @GetMapping("/note")
     public String index(Model model, HttpSession session) {
@@ -35,7 +39,15 @@ public class NoteController {
     @ResponseBody
     public ResponseEntity<String> noteApply(@RequestBody NoteWriteRequestDTO dto, HttpSession session) {
         log.info("/note/apply으로 요청 들어옴! dto에 담긴 값 : " + dto);
-        noteService.save(dto);
+        dto.setUse_yn("Y");
+        Long noteSeq = noteService.save(dto);
+        // 추가 이메일 정보가 있을 때
+        if(dto.getEmail() != null && !dto.getEmail().isEmpty() && noteSeq > 0) {
+            for(String email : dto.getEmail()) {
+                NoteEmailRequestDTO emailRequestDTO = new NoteEmailRequestDTO(noteSeq, email, "Y", LocalDateTime.now(), LocalDateTime.now());
+                noteEmailService.saveNoteEmail(emailRequestDTO);
+            }
+        }
         return ResponseEntity.ok("신청 성공");
     }
 

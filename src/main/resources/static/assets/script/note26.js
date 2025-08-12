@@ -50,6 +50,7 @@ const digitalRowWrap = document.querySelector('#digitalOpt').closest('.row');
 /* ─ Elements: 수령방법/주소 ─ */
 const addrRow    = $('#addressRow');
 const addrInput  = $('#addr');
+const addrAddInput  = $('#addr_add');
 
 /* ─ Elements: 계산기 ─ */
 const calcList   = $('#calcList');
@@ -322,6 +323,7 @@ $$('input[name="receive"]').forEach(r=>{
         }else{
             addrRow.style.display = 'none';
             addrInput.value = '';
+            addrAddInput.value = '';
             state.addr = '';
         }
         updateAll();
@@ -333,7 +335,7 @@ addrInput?.addEventListener('input', ()=>{
 });
 
 /* ─ Submit ─ */
-$('#orderForm')?.addEventListener('submit', e=>{
+document.getElementById('orderForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // FIX: 디지털 선택 시, 수량만큼 이메일 앞/뒤 검증
@@ -361,16 +363,18 @@ $('#orderForm')?.addEventListener('submit', e=>{
         }
     }
 
-    if(state.receive==='D' && !state.addr){
+    if(state.receive==='D' && (!document.getElementById('addr')?.value || !document.getElementById('addr_add')?.value)){
         alert('배송 받으실 주소를 입력해주세요.');
         addrInput?.focus();
         return;
     }
 
-    setDate();
-
-    alert('주문이 완료되었습니다.');
-    location.reload();
+    try {
+        await handleSubmit();
+    } catch (err) {
+        //console.error(err);
+        alert('오류가 발생했습니다. 관리자에게 문의해주세요.');
+    }
 });
 
 /* ─ Init ─ */
@@ -435,6 +439,76 @@ if (window.Swiper) {
     });
 }
 
-function setData() {
+function collectEmails() {
+    const pairs = document.querySelectorAll('#emailRow .email-pair');
+    const emails = [];
 
+    pairs.forEach(pair => {
+        const local = pair.querySelector('.local')?.value?.trim() || "";
+        const sel   = pair.querySelector('.domain-select')?.value || "";
+        const input = pair.querySelector('.domain-input')?.value?.trim() || "";
+
+        if (!local) return;
+
+        const domain = (sel === '직접입력' ? input : sel).trim();
+        if (!domain) return;
+
+        const email = `${local}@${domain}`;
+        emails.push(email);
+    });
+
+    return [...new Set(emails.map(e => e.toLowerCase()))];
+}
+
+function buildPayload() {
+    return {
+        name: document.getElementById('buyerName').value.trim(),
+        contact: document.getElementById('buyerPhone').value.trim(),
+        type: document.querySelector('input[name="receive"]:checked')?.value ?? 'C',
+        addr: document.getElementById('addr')?.value + " " + document.getElementById('addr_add')?.value ?? "",
+        cnt: document.getElementById('note_cnt')?.innerText ?? 0,
+        digital_cnt: (
+            document.getElementById('digitalOpt').checked &&
+            document.getElementById('digital_cnt')?.innerText
+        ) ? document.getElementById('digital_cnt').innerText : 0,
+        email: collectEmails()
+    };
+}
+
+async function postOrder(payload) {
+    const res = await fetch('/note/apply', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+        const errText = await res.text().catch(()=>'');
+        throw new Error(`요청 실패 (${res.status}) ${errText}`);
+    }
+    return res.text();
+}
+
+async function handleSubmit() {
+    let serverResp;
+
+    const btn = document.querySelector('.submit-btn');
+    btn.disabled = true;
+    const originalLabel = btn.textContent;
+    btn.textContent = '전송중...';
+
+    try {
+        const payload = buildPayload();
+        serverResp = await postOrder(payload);
+        alert('주문이 완료되었습니다.');
+        location.reload();
+    } catch (ex) {
+        //console.error(ex);
+        alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+    }
+
+    return serverResp;
 }

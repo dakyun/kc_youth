@@ -23,9 +23,12 @@ public class NoteService {
 
     private final NoteMapper mapper;
 
-    public void save(NoteWriteRequestDTO dto) {
+    public Long save(NoteWriteRequestDTO dto) {
         Note note = dto.toEntity();
         mapper.saveNote(note);
+        log.info("after insert note = {}", note);
+        Long id = note.getSeq();
+        return id;
     }
 
     public List<Map<String, Object>> getAllData() {
