@@ -11,14 +11,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Note {
-    private Long seq;
-    private String name;
-    private String contact;
-    private int cnt;
-    private String type;
-    private String addr;
-    private int digital_cnt;
+public class NoteEmail {
+    private long note_seq;
+    private String email;
     private String use_yn;
     private LocalDateTime reg_dt;
     private LocalDateTime chg_dt;

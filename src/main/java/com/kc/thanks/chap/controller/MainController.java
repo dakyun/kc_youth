@@ -29,34 +29,35 @@ public class MainController {
 
     @GetMapping("/")
     public String redirectToPage() {
-        return "redirect:/index";
+        return "redirect:/note";
     }
 
     @GetMapping("/index")
     public String index(HttpServletRequest req, Model model, @ModelAttribute("p") Page page, @RequestParam(value="searchName", defaultValue="") String searchName, HttpSession session) {
-        String userAgent = req.getHeader("User-Agent");
-        page.setPageAmount(isMobile(userAgent));
-        log.info("index로 요청 들어옴!");
-        log.info("pageNo: {}", page.getPageNo());
-        if(!searchName.equals("")) {
-            log.info("searchName: {}", searchName);
-        }
-
-        // reply list를 요청하는 로직 (페이지 당 12개 보여주기)
-        List<ReplyListResponseDTO> replyList = replyService.findAll(page, searchName);
-
-        // 전체 reply 갯수를 요청하는 로직
-        int replyCount = replyService.countAll(searchName);
-
-        // 페이지 버튼 만들기
-        PageMaker pageMaker = new PageMaker(page, replyCount);
-
-        model.addAttribute("searchName", searchName);
-        model.addAttribute("replyList", replyList);
-        model.addAttribute("replyCount", replyCount);
-        model.addAttribute("maker", pageMaker);
-
-        return "chap/index";
+        return "redirect:/note";
+//        String userAgent = req.getHeader("User-Agent");
+//        page.setPageAmount(isMobile(userAgent));
+//        log.info("index로 요청 들어옴!");
+//        log.info("pageNo: {}", page.getPageNo());
+//        if(!searchName.equals("")) {
+//            log.info("searchName: {}", searchName);
+//        }
+//
+//        // reply list를 요청하는 로직 (페이지 당 12개 보여주기)
+//        List<ReplyListResponseDTO> replyList = replyService.findAll(page, searchName);
+//
+//        // 전체 reply 갯수를 요청하는 로직
+//        int replyCount = replyService.countAll(searchName);
+//
+//        // 페이지 버튼 만들기
+//        PageMaker pageMaker = new PageMaker(page, replyCount);
+//
+//        model.addAttribute("searchName", searchName);
+//        model.addAttribute("replyList", replyList);
+//        model.addAttribute("replyCount", replyCount);
+//        model.addAttribute("maker", pageMaker);
+//
+//        return "chap/index";
     }
 
 

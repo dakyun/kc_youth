@@ -8,7 +8,7 @@ import java.util.Map;
 
 @Mapper
 public interface NoteMapper {
-    void saveNote(Note note);
+    int saveNote(Note note);
 
     List<Map<String, Object>> getAllData();
 }

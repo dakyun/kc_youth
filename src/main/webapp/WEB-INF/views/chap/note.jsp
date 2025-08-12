@@ -57,7 +57,7 @@
                     <!-- 좌측: 수량 조절 -->
                     <div class="qty-control" data-item="note">
                         <button type="button" class="minus">−</button>
-                        <div class="num">1</div>
+                        <div class="num" id="note_cnt">1</div>
                         <button type="button" class="plus">＋</button>
                     </div>
                     <!-- 우측: 가격 정보 -->
@@ -91,7 +91,7 @@
                 <div class="opt-right">
                     <div class="qty-control" data-item="digital">
                         <button type="button" class="minus">−</button>
-                        <div class="num">1</div>
+                        <div class="num" id="digital_cnt">1</div>
                         <button type="button" class="plus">＋</button>
                     </div>
                     <div class="wrapper">
@@ -123,7 +123,7 @@
                             <button type="button" onclick="execDaumPostcode()">검색</button>
                             <input id="addr" class="input-style yet" type="text" placeholder="배송 받으실 주소를 정확히 입력하세요">
                         </div>
-                        <input id="addr_add" class="input-style yet n2" type="text" name="receive" placeholder="상세 주소 입력">
+                        <input id="addr_add" class="input-style yet n2" type="text" placeholder="상세 주소 입력">
                     </div>
                 </div>
             </div>

@@ -3,12 +3,17 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.kc.thanks.chap.mapper.NoteMapper">
-    <insert id="saveNote" parameterType="com.kc.thanks.chap.dto.requestDTO.NoteWriteRequestDTO">
-        INSERT INTO note (
-        name, contact, cnt, type, addr, use_yn, reg_dt, chg_dt
+    <insert id="saveNote"
+            parameterType="com.kc.thanks.chap.entity.Note"
+            useGeneratedKeys="true"
+            keyProperty="seq"
+            keyColumn="seq">
+        INSERT INTO dbo.note (
+        name, contact, cnt, [type], addr, digital_cnt, use_yn, reg_dt, chg_dt
         )
+        OUTPUT inserted.seq
         VALUES (
-        #{name}, #{contact}, #{cnt}, #{type}, #{addr}, #{use_yn}, #{reg_dt}, #{chg_dt}
+        #{name}, #{contact}, #{cnt}, #{type}, #{addr}, #{digital_cnt}, #{use_yn}, #{reg_dt}, #{chg_dt}
         )
     </insert>
 
