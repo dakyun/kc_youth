@@ -17,6 +17,7 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+<div class="forPC">
 <div class="top_img">
     <div class="logo">
         <img src="/assets/images/note26/top_logo.png" alt="">
@@ -161,6 +162,7 @@
 <div class="detail_img_wrap" id="sectionDetail">
     <div class="detail_img">
         <img src="/assets/images/note26/detail01.jpg" alt="">
+        <img src="/assets/images/note26/detail20.jpg" alt="">
         <img src="/assets/images/note26/detail02.jpg" alt="">
         <img src="/assets/images/note26/detail03.jpg" alt="">
         <img src="/assets/images/note26/detail04.jpg" alt="">
@@ -175,7 +177,7 @@
     <a href="http://pf.kakao.com/_xcBxouM"><img src="/assets/images/note26/footer.jpg"></a>
 </footer>
 <div class="" style="padding-bottom:100px;"></div>
-
+</div>
 <script src="/assets/script/note26.js?ts=${System.currentTimeMillis()}"></script>
 </body>
 </html>
