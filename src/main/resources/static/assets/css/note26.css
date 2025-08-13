@@ -1,199 +1,5 @@
 @charset "UTF-8";
-@charset "UTF-8";
-
-/* PC: 400px 고정 컨테이너 + 스크롤 */
-@media (min-width: 768px) {
-    body { background: linear-gradient(180deg, #cccccc 0%, #eee 50%, #fff 100%);
-    .forPC {
-        width: 400px;
-        margin: 0 auto;
-        max-height: 100vh;
-        overflow: auto;
-        background: #fff;
-
-        /* cqw 사용을 위한 컨테이너 선언 */
-        container-type: inline-size; /* 1cqw = 컨테이너 너비의 1% (여기선 4px) */
-    }
-
-    /* ───── 상단 영역 ───── */
-    .forPC .top_img { width:100%; overflow:hidden; }
-    .forPC .top_img img { width:100%; }
-
-    .forPC .top_img .logo {
-        width:100%;
-        padding: 2.6041666667cqw 3.90625cqw;
-        display:flex;
-        justify-content:flex-start;
-        column-gap: 1.3020833333cqw;
-        align-items:center;
-    }
-    .forPC .top_img .logo img { width:36.4583333333cqw; }
-    .forPC .top_img .logo p {
-        font-size:3.6458333333cqw; font-weight:400; color:#111;
-        text-align:left; transform: translateY(0.5208333333cqw);
-    }
-    .forPC .top_img .logo p strong { font-weight:700; }
-
-    .forPC .top_img .topSwiper { position:relative; }
-    .forPC .top_img .topSwiper .swiper-pagination {
-        position:absolute; bottom:3.90625cqw; left:50%; transform:translateX(-50%);
-    }
-    .forPC .top_img .topSwiper .swiper-pagination .swiper-pagination-bullet-active { background:#555; }
-
-    .forPC .content_gap { width:100%; height:3.6458333333cqw; background:#f0f0f0; }
-
-    /* ───── 폼/콘텐츠 루트 ───── */
-    .forPC #noteSell {
-        max-width: 100%;
-        margin: 10.4166666667cqw auto 5.2083333333cqw;
-        font-family: "Pretendard","Apple SD Gothic Neo",sans-serif;
-    }
-    .forPC #noteSell h2 {
-        font-size: 4.6875cqw; font-weight:600; color:#111; text-align:center;
-        margin-bottom: 5.2083333333cqw;
-    }
-    .forPC #noteSell form { display:flex; flex-direction:column; }
-    .forPC #noteSell .note-box { border-radius:0.78125cqw; padding:0 3.90625cqw; background:#fff; }
-    .forPC #noteSell .row {
-        display:flex; flex-direction:column; gap:2.0833333333cqw; margin-bottom:10.4166666667cqw;
-    }
-    .forPC #noteSell .row.marginless { margin-bottom:3.90625cqw; }
-    .forPC #noteSell .row .s-txt { font-size:3.90625cqw; font-weight:600; color:#111; text-align:left; }
-    .forPC #noteSell .row .s-txt em { color:#E81010; margin-left:0.5208333333cqw; }
-    .forPC #noteSell .row .mini {
-        font-size:3.6458333333cqw; font-weight:400; color:#BDBDBD; line-height:1.6;
-    }
-
-    .forPC #noteSell .row .input-style {
-        height:10.4166666667cqw; width:100%;
-        border:1px solid #E5E5E5; border-radius:0.2604166667cqw;
-        padding:0 3.90625cqw; font-size:3.6458333333cqw; color:#111;
-    }
-    .forPC #noteSell .row .input-style::placeholder { font-size:3.6458333333cqw; color:#BDBDBD; }
-
-    /* 수량/가격 */
-    .forPC #noteSell .qty-price { display:flex; align-items:center; gap:2.0833333333cqw; width:100%; }
-    .forPC #noteSell .qty-control { display:flex; align-items:center; gap:0.6510416667cqw; }
-    .forPC #noteSell .qty-control button {
-        width:7.8125cqw; height:7.8125cqw; border:1px solid #E5E5E5; background:#F5F5F5;
-        font-size:3.90625cqw; font-weight:300; color:#111; cursor:pointer;
-    }
-    .forPC #noteSell .qty-control .num {
-        width:11.71875cqw; height:7.8125cqw; line-height:7.8125cqw;
-        border:1px solid #E5E5E5; background:#fff; font-size:3.6458333333cqw; text-align:center;
-    }
-    .forPC #noteSell .price-area { margin-left:auto; display:flex; align-items:center; gap:1.0416666667cqw; }
-    .forPC #noteSell .price-area .orig { font-size:3.90625cqw; color:#BDBDBD; text-decoration:line-through; }
-    .forPC #noteSell .price-area .rate { font-size:3.90625cqw; font-weight:600; color:#F4633A; }
-    .forPC #noteSell .price-area .disc-price { font-size:4.4270833333cqw; font-weight:600; color:#111; }
-    .forPC #noteSell .price-area .badge {
-        background:#E81010; color:#fff; font-size:3.125cqw; padding:0.5208333333cqw 1.3020833333cqw; border-radius:0.2604166667cqw;
-    }
-
-    /* 체크/라디오 */
-    .forPC #noteSell .opt-check { display:flex; align-items:center; gap:1.3020833333cqw; cursor:pointer; }
-    .forPC #noteSell .opt-check .box {
-        width:4.6875cqw; height:4.6875cqw; border-radius:0.5208333333cqw;
-        background:#fff url(../images/note26/ico_checkbox.svg) no-repeat center/100%;
-    }
-    .forPC #noteSell .opt-check input:checked + .box {
-        border-radius:0.2604166667cqw;
-        background:#F4633A url(../images/note26/ico_checkbox_colored.svg) no-repeat center/100%;
-    }
-    .forPC #noteSell .opt-check .label-txt { font-size:3.6458333333cqw; color:#7e7e7e; }
-
-    .forPC #noteSell .radio { display:flex; flex-direction:column; gap:1.3020833333cqw; margin-top:1.3020833333cqw; }
-    .forPC #noteSell .radio .flex { display:flex; align-items:center; gap:1.3020833333cqw; }
-    .forPC #noteSell .radio .flex input[type=radio] { width:3.6458333333cqw; height:3.6458333333cqw; accent-color:#111; }
-    .forPC #noteSell .radio .flex .word { font-size:3.6458333333cqw; }
-    .forPC #noteSell .radio .mini {
-        font-size:3.3854166667cqw; color:#7e7e7e; line-height:1.6;
-        margin-left:4.6875cqw; margin-bottom:2.6041666667cqw;
-    }
-
-    /* 계산/합계/버튼 */
-    .forPC #noteSell .calc-box { background:#f0f0f0; border-radius:1.0416666667cqw; padding:5.2083333333cqw 3.90625cqw; }
-    .forPC #noteSell .calc-title { font-size:4.1666666667cqw; font-weight:600; margin-bottom:1.3020833333cqw; display:flex; gap:1.0416666667cqw; }
-    .forPC #noteSell .calc-list li { display:flex; align-items:baseline; gap:1.0416666667cqw; padding:1.953125cqw 0; }
-    .forPC #noteSell .calc-list .name { flex:1; font-size:3.6458333333cqw; }
-    .forPC #noteSell .calc-list .name .sub {
-        margin-left:0.78125cqw; color:#BDBDBD; text-decoration:line-through; font-size:3.3854166667cqw; display:inline-block; margin-top:2.0833333333cqw;
-    }
-    .forPC #noteSell .calc-list .name .rate { margin-left:0.78125cqw; font-size:3.3854166667cqw; font-weight:700; color:#F4633A; }
-    .forPC #noteSell .calc-list .dots { flex:1; border-bottom:1px dotted #ccc; transform:translateY(-0.2em); }
-    .forPC #noteSell .calc-list .amt { white-space:nowrap; font-size:3.6458333333cqw; font-weight:600; }
-
-    .forPC #noteSell .total {
-        margin-top:3.2552083333cqw; padding-top:3.2552083333cqw; border-top:1px solid #ccc;
-        display:flex; justify-content:space-between; align-items:center;
-        font-size:4.4270833333cqw; font-weight:600;
-    }
-    .forPC #noteSell .total strong { color:#E81010; margin-left:1.3020833333cqw; font-size:5.2083333333cqw; font-weight:700; }
-
-    .forPC #noteSell .sendmoney {
-        display:block; width:100%; text-align:center; padding:3.90625cqw 0;
-        background:#F4633A; color:#fff; border-radius:1.0416666667cqw; font-size:4.1666666667cqw; font-weight:600;
-    }
-    .forPC #noteSell .alert { font-size:3.6458333333cqw; color:#7e7e7e; text-align:center; margin-top:3.90625cqw; padding-bottom:5.2083333333cqw; }
-
-    .forPC #noteSell .fixed_bottom {
-        position:absolute; bottom:0; width:400px; background:#fff;
-        padding:2.6041666667cqw; display:flex; gap:1.3020833333cqw; border-top:1px solid #F5F5F5; z-index:21;
-    }
-    .forPC #noteSell .fixed_bottom .left {
-        padding:2.0833333333cqw 2.6041666667cqw; border:1px solid #E5E5E5; border-radius:1.0416666667cqw;
-        font-size:3.90625cqw; font-weight:600; background:#fff; display:flex; align-items:center; justify-content:center;
-    }
-    .forPC #noteSell .submit-btn {
-        display:block; width:100%; text-align:center; padding:3.6cqw 0;
-        background:#111; color:#fff; border-radius:1.0416666667cqw; font-size:4.1666666667cqw; font-weight:600; margin-top:2.6041666667cqw;
-    }
-
-    /* 상세 이미지 펼치기 */
-    .forPC .detail_img_wrap .detail_img {padding:7.8125cqw 3.90625cqw; }
-    .forPC .detail_img_wrap .btn-more {
-        width:100%; padding:33.8888888889cqw 4.1666666667cqw 5.5555555556cqw;
-        position:absolute; left:0; bottom:0;
-        background: linear-gradient(180deg, #cccccc 0%, #fff 50%, #fff 100%);
-        display:none;
-    }
-    .forPC .detail_img_wrap .btn-more span {
-        height:13.8888888889cqw; line-height:13.8888888889cqw; border-radius:8.3333333333cqw;
-        font-size:3.8888888889cqw;
-    }
-    .forPC .detail_img_wrap .btn-more span::after {
-        width:2.2222222222cqw; height:2.2222222222cqw; border:0.2777777778cqw solid #F4633A;
-        border-width:0 0.2777777778cqw 0.2777777778cqw 0; margin:-1.6666666667cqw 0 0 2.7777777778cqw;
-    }
-    .forPC .detail_img_wrap.open { padding-bottom:19.53125cqw; }
-    .forPC .detail_img_wrap.open .btn-more { padding-top:10cqw; }
-    .forPC .detail_img_wrap.open .btn-more span::after {
-        border-width:0.2777777778cqw 0 0 0.2777777778cqw; margin-top:0.6666667cqw;
-    }
-
-    /* 탭 */
-    .forPC .tab-nav { position:sticky; top:0; z-index:15; display:flex; background:#fff; border-bottom:1px solid #eee; }
-    .forPC .tab-nav .tab-item {
-        flex:1; padding:3.90625cqw 0; font-size:3.90625cqw; font-weight:500; text-align:center;
-        border-bottom:2px solid transparent; transition:border-color .3s, color .3s;
-    }
-    .forPC .tab-nav .tab-item.active { border-color:#111; font-weight:600; }
-
-    /* 이메일 행 */
-    .forPC #emailRow { display:flex; flex-direction:column; gap:1.0416666667cqw; }
-    .forPC #emailRow .email-pair { display:flex; align-items:center; gap:1.0416666667cqw; }
-    .forPC #emailRow .email-pair input,
-    .forPC #emailRow .email-pair select {
-        height:9.1145833333cqw; border:1px solid #E5E5E5; border-radius:0.2604166667cqw; padding:0 2.6041666667cqw; font-size:3.3854166667cqw;
-    }
-    .forPC #emailRow .email-pair .local { width:31.25cqw; }
-    .forPC #emailRow .email-pair .at { font-size:3.6458333333cqw; min-width:2.6041666667cqw; text-align:center; }
-    .forPC #emailRow .email-pair .domain-select { width:55.9895833333cqw; flex:none; }
-    .forPC #emailRow .email-pair .domain-select.less { width:16.9270833333cqw; }
-    .forPC #emailRow .email-pair .domain-input { display:none; width:33.8541666667cqw; }
-}
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .top_img {
         width: 100%;
         overflow: hidden;
@@ -240,10 +46,27 @@
         width: 100%;
         height: 3.6458333333vw;
     }
+}
 #noteSell {
     max-width: 768px;
     margin: 10.4166666667vw auto 5.2083333333vw;
     font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    /* ──────────────────────────────
+     * Row Form Input
+     * ────────────────────────────── */
+    /* ──────────────────────────────
+     * Quantity + Price (말씀노트/옵션)
+     * ────────────────────────────── */
+    /* ──────────────────────────────
+     * 옵션 체크박스 (디지털 노트)
+     * ────────────────────────────── */
+    /* 디지털 옵션 렌더 행 */
+    /* ──────────────────────────────
+     * 수령 방법 (라디오 + 주소)
+     * ────────────────────────────── */
+    /* ──────────────────────────────
+     * 총 금액 계산기
+     * ────────────────────────────── */
 }
 #noteSell h2 {
     font-size: 4.6875vw;
@@ -760,6 +583,15 @@
     color: #BDBDBD;
 }
 
+@keyframes thunder {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}/*# sourceMappingURL=note26ver2.css.map */
+
 #emailRow {
     display: flex;
     flex-direction: column;
@@ -806,13 +638,4 @@
 #emailRow .email-pair .domain-input {
     display: none;
     width: 33.8541666667vw;
-}
-}
-@keyframes thunder {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+}/*# sourceMappingURL=note26ver2.css.map */
