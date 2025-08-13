@@ -148,7 +148,7 @@
             </div>
             <button type="submit" class="submit-btn">주문서 제출하기</button>
 
-            <p class="alert">- 주문서 제출 시 개인정보수집에 동의한 것으로 간주됩니다.<br>- 주문서 제출 후 하단 송금하기를 눌러 입금을 완료해주세요.</p>
+            <p class="alert">주문서 제출 시 개인정보수집에 동의한 것으로 간주됩니다.</p>
         </div>
 
         <!-- 하단 고정 -->
