@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="청년돕기 프로젝트, 2026 말씀노트 예약" />
+    <meta property="og:description" content="청년돕기 프로젝트, 2026 말씀노트 예약 페이지입니다." />
+    <meta property="og:image" content="https://www.2026message-note.com/assets/images/note26/note_thumb.jpg" />
     <title>2026 말씀노트 사전판매</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/assets/css/resetfornote.css?ts=${System.currentTimeMillis()}">
@@ -23,6 +26,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="/assets/images/note26/top_img01.jpg" alt=""></div>
             <div class="swiper-slide"><img src="/assets/images/note26/top_img02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/images/note26/top_img03.jpg" alt=""></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -45,7 +49,7 @@
             </div>
             <div class="row">
                 <span class="s-txt">연락처<em>*</em></span>
-                <input type="tel" id="buyerPhone" class="input-style" placeholder="예) 010-1234-5678" required>
+                <input type="tel" id="buyerPhone" class="input-style" placeholder="휴대폰번호를 정확하게 입력해주세요" required>
             </div>
         </div>
 
@@ -115,7 +119,7 @@
                         <input type="radio" id="parcel" name="receive" value="D">
                         <span class="word">택배발송</span>
                     </label>
-                    <span class="mini">택배발송을 원하시면 선택 후 주소를 입력해주세요.<br>*택배비 20권당 4,000원</span>
+                    <span class="mini">택배발송을 원하시면 선택 후 주소를 입력해주세요.<br>* 택배비 4,000원 (20권 마다 부과)</span>
 
                     <!-- 택배 선택 시 노출 -->
                     <div class="etc n2" id="addressRow" style="display:none;">
@@ -141,15 +145,15 @@
                     <strong id="totalPrice">12,000원</strong>
                 </div>
             </div>
-            <a href="https://aq.gy/f/Q%5exCr" class="sendmoney" target="_blank">송금하기</a>
+            <button type="submit" class="submit-btn">주문서 제출하기</button>
 
-            <p class="alert">송금 후 현재 페이지의 "주문서 제출하기"를 꼭 눌러주세요!</p>
+            <p class="alert">- 주문서 제출 시 개인정보수집에 동의한 것으로 간주됩니다.<br>- 주문서 제출 후 하단 송금하기를 눌러 입금을 완료해주세요.</p>
         </div>
 
         <!-- 하단 고정 -->
         <div class="fixed_bottom">
-            <a href="" class="left">문의</a>
-            <button type="submit" class="submit-btn">주문서 제출하기</button>
+            <a href="http://pf.kakao.com/_xcBxouM/chat" class="left">문의</a>
+            <a href="https://aq.gy/f/Q%5exCr" class="sendmoney" target="_blank">송금하기</a>
         </div>
     </form>
 </main>

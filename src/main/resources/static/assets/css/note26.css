@@ -419,10 +419,9 @@
 #noteSell .sendmoney {
     display: block;
     width: 100%;
-    margin-top: 2.6041666667vw;
     text-align: center;
     padding: 3.90625vw 0;
-    background: #111;
+    background: #F4633A;
     color: #fff;
     border-radius: 1.0416666667vw;
     font-size: 4.1666666667vw;
@@ -465,20 +464,19 @@
     align-items: center;
     justify-content: center;
 }
-#noteSell .fixed_bottom .submit-btn {
-    flex: 1;
-    height: 11.71875vw;
-    border: 0;
-    background: #F4633A;
+#noteSell .submit-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 3.6vw 0;
+    background: #111;
     color: #fff;
     border-radius: 1.0416666667vw;
     font-size: 4.1666666667vw;
     font-weight: 600;
     color: #fff;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top:2.6041666667vw;
 }
 
 .detail_img_wrap {
