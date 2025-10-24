@@ -21,7 +21,6 @@
 <div class="top_img">
     <div class="logo">
         <img src="/assets/images/note26/top_logo.png" alt="">
-        <p><strong>사전예약</strong> (8/15~10/15)</p>
     </div>
     <div class="topSwiper">
         <div class="swiper-wrapper">
@@ -31,12 +30,12 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
-    <img src="/assets/images/note26/top_img10.jpg" alt="">
+    <img src="/assets/images/note26/top_img11.jpg" alt="">
 </div>
 <div class="content_gap"></div>
 <!-- 중간 네비게이션 -->
 <nav class="tab-nav" id="tabNav">
-    <a href="#noteSell" class="tab-item active">사전예약 주문</a>
+    <a href="#noteSell" class="tab-item active">주문양식 작성</a>
     <a href="#sectionDetail" class="tab-item">상세내용 보기</a>
 </nav>
 
@@ -114,13 +113,13 @@
                         <input type="radio" name="receive" value="C" checked>
                         <span class="word">현장수령</span>
                     </label>
-                    <span class="mini">10/19(주일), 10/26(주일) 오후 1시 맑은샘광천교회 2층 로비</span>
+                    <span class="mini">11/23(주일)~12/28(주일) 매주 청년부예배 전후,<br>맑은샘광천교회 2층 로비</span>
 
                     <label class="flex">
                         <input type="radio" id="parcel" name="receive" value="D">
                         <span class="word">택배발송</span>
                     </label>
-                    <span class="mini">택배발송을 원하시면 선택 후 주소를 입력해주세요.<br>* 택배비 4,000원 (20권 마다 부과)</span>
+                    <span class="mini">택배발송을 원하시면 선택 후 주소를 입력해주세요.<br>* 택배비 4,000원 (10권마다 부과)</span>
 
                     <!-- 택배 선택 시 노출 -->
                     <div class="etc n2" id="addressRow" style="display:none;">

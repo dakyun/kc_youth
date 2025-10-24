@@ -1,9 +1,9 @@
 /* ─ Constants ─ */
-const PRICE_NOTE = 12000;
-const PRICE_NOTE_10 = 11400;
-const PRICE_NOTE_20 = 10800;
+const PRICE_NOTE = 13000;
+const PRICE_NOTE_10 = 12350;
+const PRICE_NOTE_20 = 11700;
 const PRICE_DIGITAL = 3000;
-const SHIPPING_PER_20 = 4000;
+const SHIPPING_PER_10 = 4000;
 
 /* ─ State ─ */
 const state = {
@@ -23,9 +23,14 @@ function noteUnit(q){
     return q>=20 ? PRICE_NOTE_20 : q>=10 ? PRICE_NOTE_10 : PRICE_NOTE;
 }
 function noteDiscountRate(q){ return q>=20?10 : q>=10?5 : 0; }
+/* ─ Helpers ─ */
 function shippingFee(){
-    return state.receive==='D' ? Math.ceil(state.noteQty/20) * SHIPPING_PER_20 : 0;
+    // 변경: 20권 → 10권 단위로 계산
+    return state.receive==='D'
+        ? Math.ceil(state.noteQty / 10) * SHIPPING_PER_10
+        : 0;
 }
+
 
 /* ─ Elements: 노트 ─ */
 const noteMinus = $('.qty-control[data-item="note"] .minus');
@@ -121,8 +126,9 @@ function renderCalc(){
 
     // 배송비
     const ship = shippingFee();
-    if(ship>0){
+    if (ship > 0){
         items.push({
+            // 안내 문구도 10권 기준으로 표시
             name: `택배배송비`,
             amount: ship,
             plus: true
