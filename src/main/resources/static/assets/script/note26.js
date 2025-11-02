@@ -27,7 +27,7 @@ function noteDiscountRate(q){ return q>=20?10 : q>=10?5 : 0; }
 function shippingFee(){
     // 변경: 20권 → 10권 단위로 계산
     return state.receive==='D'
-        ? Math.ceil(state.noteQty / 10) * SHIPPING_PER_10
+        ? Math.ceil(state.noteQty / 5) * SHIPPING_PER_10
         : 0;
 }
 
