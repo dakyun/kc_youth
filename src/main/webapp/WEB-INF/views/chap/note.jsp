@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="청년돕기 프로젝트, 2026 말씀노트 예약" />
     <meta property="og:description" content="청년돕기 프로젝트, 2026 말씀노트 예약 페이지입니다." />
-    <meta property="og:image" content="https://www.2026message-note.com/assets/images/note26/note_thumb02.jpg" />
+    <meta property="og:image" content="https://www.2026message-note.com/assets/images/note26/note_thumb03.jpg" />
     <title>2026 말씀노트 판매</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/assets/css/resetfornote.css?ts=${System.currentTimeMillis()}">
